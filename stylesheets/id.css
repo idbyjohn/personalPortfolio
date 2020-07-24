@@ -1,0 +1,495 @@
+/*Universal Styles*/
+
+* {
+	box-sizing: border-box;
+}
+
+.error {
+	border: solid red 2px;
+}
+
+
+/*====================================
+======================================
+Header styles for phone
+
+======================================
+======================================*/
+
+/*Sandwich Navigation*/
+#sandwichNav {
+	position: fixed;
+	z-index: 2;
+	background-color: #7e7e7e;
+	height: 40px;
+	width: 40px;
+	top: 12px;
+	right: 12px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#sandwichNav div {
+	margin: 0 auto;
+	height: 2px;
+	width: 50%;
+	background-color: white;
+}
+
+#sandwichNav div:first-child {
+	margin-top: 10px;
+}
+
+#sandwichNav div:last-child {
+	margin-bottom: 10px;
+}
+
+#expandedMenuLander {
+	z-index: 2;
+	position: fixed;
+	top: 364px;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0);
+}
+
+/*Expanded Menu Styling*/
+
+#expandedMenuBacker {
+	top: 0;
+	z-index: 1;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0);
+}
+
+#expandedMenu {
+	display: none;
+}
+
+#expandedMenuLander {
+	display: none;
+}
+
+#expandedMenu {
+	background: linear-gradient(rgba(126 ,126, 126, 0.8),rgba(126 ,126, 126, 0.8));
+	border-radius: 5px;
+	width: 100%;
+}
+
+#expandedMenu ul {
+	list-style-type: none;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0));
+	text-align: center;
+}
+
+#expandedMenu li {
+	padding: 16px;
+}
+
+#expandedMenu li:first-child {
+	margin-top: 46px;
+}
+
+#expandedMenu li:last-child {
+	margin-bottom: 46px;
+}
+
+#expandedMenu li a {
+	text-decoration: none;
+	color: white;
+	font-family: 'EB Garamond', serif;
+	font-size: 1.3em;
+}
+#menuItems {
+	padding: 0;
+}
+
+/*Main Navigation*/
+#mainNav {
+	display: none;
+}
+
+.spacer {
+	height: 46px;
+	background-color: black;
+}
+
+.tagLine {
+	background-color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+.tagLine p {
+	color: white;
+	font-family: 'Forum', cursive;
+	font-size: 1.3em;
+	padding-left: 16px;
+	margin: 20px 0px;
+	max-width: 80%;
+}
+
+/*====================================
+======================================
+Document Background and Header styles for phone
+
+======================================
+======================================*/
+
+/*Document Background*/
+#documentWrapper {
+	background-size: cover;
+	background-position: center;
+	background-image: url('../img/mainBacker.jpg');
+	min-height: 100vh;
+}
+
+/*Document Header*/
+.secondaryHeader {
+	background-color: black;
+}
+
+.secondaryHeader p {
+	color: white;
+	font-family: 'Forum', cursive;
+	font-size: 1.4em;
+	padding-left: 16px;
+	max-width: 78%;
+	margin: 0;
+	padding: 20px;
+}
+
+.secondaryTitle {
+	border: black 1px solid;
+	background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9));
+	width: 100%;
+	margin: 0px auto;
+	box-shadow: 5px 10px 10px rgb(0, 0, 0);
+}
+
+.secondaryTitle h1 {
+	font-size: 5vh;
+	color: white;
+	font-family: 'EB Garamond', serif;
+	font-weight: bolder;
+	text-align: center;
+	margin: 18px;
+}
+
+
+/*====================================
+======================================
+Main styles for phone
+
+======================================
+======================================*/
+
+.smallCard {
+	border: black 1px solid;
+	background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9));
+	width: 80%;
+	margin: 20px auto;
+	box-shadow: 5px 10px 10px rgb(0, 0, 0);
+}
+
+.turnoverApt {
+	margin-top: 70px;
+}
+
+.smallCard h2 {
+	font-size: 3.3vh;
+	border: white solid 2px;
+	margin-top: 20px;
+}
+
+.smallCard h2, .smallCard p, .smallCard a {
+	font-family: 'Forum', cursive;
+	color: white;
+	padding: 0px 20px;
+	margin-top: 0px;
+}
+
+.smallCard h2, .smallCard h3, .smallCard a {
+	color: white;
+}
+
+.smallCard h3 {
+	font-family: 'Forum', cursive;
+}
+.smallCard a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.smallImage {
+	display: block;
+	height: auto;
+	width: 90%;
+	margin: 0px auto;
+	padding: 20px;
+}
+
+.summaryPurpose {
+	text-align: justify;
+	padding: 20px;
+}
+
+.fileDownloads {
+	text-align: justify;
+	padding: 20px;
+}
+
+.fileDownloads a {
+	display: block;
+}
+
+/*====================================
+======================================
+Footer styles for phone
+
+======================================
+======================================*/
+
+footer {
+	margin: 0;
+	width: 100%;
+	background-color: black;
+}
+
+footer p {
+	font-family: 'Forum', cursive;
+	color: white;
+	text-align: center;
+	margin: 0;
+}
+
+/*====================================
+======================================
+Main and Header Layout for phone
+
+======================================
+======================================*/
+
+#documentWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.secondaryTitle {
+	position: fixed;
+}
+
+.secondaryMain {
+	margin-top: 100px;
+}
+
+/*====================================
+======================================
+Sandwich layout for phone
+
+======================================
+======================================*/
+
+#expandedMenu {
+	position: fixed;
+	top: 52px;
+	z-index: 2;
+	/*right: 12px;*/
+}
+
+/*====================================
+======================================
+Main Layout for phone
+
+======================================
+======================================*/
+.secondaryMain {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.smallCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/*====================================
+======================================
+Header styles for >352px
+
+======================================
+======================================*/
+
+@media (min-width: 352px) {
+	.tagLine p {
+		font-size: 1.4em;
+	}
+}
+
+/*====================================
+======================================
+Main Styles for >768px
+
+======================================
+======================================*/
+
+@media (min-width: 768px) {
+	.smallCard {
+		width: 85%;
+	}
+	.smallCard h2 {
+		width: 100%;
+		padding: 20px;
+	}
+	.smallCardImage {
+		background-color: white;
+		width: 30%;
+		margin: 16px;
+	}
+	.smallImage {
+		width: 100%;
+	}
+	.smallCard .smallCardContent {
+		width: 65%;
+		margin: 16px 0px;
+	}
+	.smallCardContent h2 {
+		padding-bottom: 16px;
+		border: white 2px solid;
+	}
+	.summaryPurpose h3 {
+		margin-top: 0px;
+	}
+
+	.summaryPurpose p:first-child {
+		padding-top: 18px;
+	}
+	.fileDownloads h3 {
+		margin: 0;
+		padding:16px 0px;
+	}
+	.summaryPurposeWrapper, .fileDownloadsWrapper {
+	border: 0.5px solid white;
+	}
+}
+
+/*====================================
+======================================
+Main Navigation Styles > 700px
+
+======================================
+======================================*/
+
+@media only screen and (min-width: 700px) {
+
+	#mainNav ul {
+		list-style-type: none;
+		background-color: black;
+		margin: 0;
+		padding: 0;
+		height: 65px;
+		width: 100%;
+	}
+
+	#mainNav ul li{
+		padding: 10px;
+		text-align: center;
+		margin: 0px 20px;
+	}
+
+	#mainNav ul li:hover {
+		background-color: rgb(35, 39, 41);
+	}
+
+	#mainNav ul li:last-child {
+		margin-right: auto;
+	}
+
+	#mainNav ul li a {
+		margin-top: 4px;
+		text-decoration: none;
+		color: white;
+		font-family: 'Forum', cursive;
+	}
+
+/*====================================
+======================================
+Main Nav Layout > 700px
+
+======================================
+======================================*/
+
+@media only screen and (min-width: 700px) {
+
+	#sandwichNavWrapper {
+		display: none;
+	}
+	#sandwichNav {
+		display: none;
+	}
+	#mainNav {
+		display: flex;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		width: 100%;
+		z-index: 1; 
+	}
+
+	#mainNav ul {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-around;
+	}
+
+	#mainNav ul li {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	/*#mainNav ul li a {
+		align-self: center;
+	}*/
+}
+
+/*====================================
+======================================
+Main Layout for >768px
+
+======================================
+======================================*/
+
+@media (min-width: 768px) {
+
+	.smallCard {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.smallCardImage {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.fileDownloadsWrapper {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		max-height: 150px;
+	}
+	.homeBrew .smallCardContent .fileDownloads .fileDownloadsWrapper p {
+		padding-top: 12px;
+	}
+}
