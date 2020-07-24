@@ -1,4 +1,9 @@
-/*Universal Styles*/
+
+/*====================================================================================================================
+
+                           								 UNIVERSAL STYLES
+
+======================================================================================================================*/
 
 * {
 	box-sizing: border-box;
@@ -9,18 +14,27 @@
 }
 
 
-/*====================================
-======================================
-Header styles for phone
 
-======================================
-======================================*/
+/*======================================================================================================================
+
+                           								 HEADER PHONE
+
+========================================================================================================================*/
+
+/*-----------------------------GENERAL FORMATTING----------------------------------*/
+
+                               /*STYLE*/
 
 .spacer {
 	height: 65px;
 	background-color: black;
 }
-/*Sandwich Icon Styling*/
+
+                         		/*LAYOUT*/
+
+/*-----------------------------SANDWICH ICON----------------------------------*/
+
+								/*STYLE*/
 #sandwichNav {
 	position: fixed;
 	background-color: #7e7e7e;
@@ -46,12 +60,18 @@ Header styles for phone
 	margin-bottom: 10px;
 }
 
-/*Expanded Menu Styling*/
+							     /*LAYOUT*/
 
+
+/*-----------------------------SANDWICH MENU----------------------------------*/
+
+								   /*STYLE*/
+
+/*sets the initial conditions for Sandwich.JS to work*/
 #expandedMenu {
 	display: none;
 }
-
+/*sets the initial conditions for Sandwich.JS to work*/
 #expandedMenuLander {
 	display: none;
 }
@@ -89,201 +109,7 @@ Header styles for phone
 	padding: 0;
 }
 
-/*Main Navigation*/
-#mainNav {
-	display: none;
-}
-
-/*Header, tagline, profile picture, and title*/
-#mainHeader {
-	min-height: 100vh;
-	background-size: cover;
-	background-position: center;
-	background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 99%), url('../img/titleGraphicMonitor.jpg');
-}
-
-
-#documentWrapper {
-	background-size: cover;
-	background-position: center;
-	background-image: url('../img/mainBacker.jpg');
-}
-
-main {
-	background-image:  linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 30%);
-	padding-top: 8vh;
-}
-
-.tagLine {
-	background-color: black;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 0;
-}
-
-.tagLine p {
-	color: white;
-	font-family: 'Forum', cursive;
-	font-size: 1.3em;
-	padding-left: 16px;
-	margin: 20px 0px;
-	max-width: 80%;
-}
-
-.specialTagLine, .specialSocialNav, .specialGreeting {
-	display: none;
-}
-
-.mainLogo {
-	height: 37vh;
-	width: 37vh;
-	align-self: center;
-}
-
-.profilePic {
-	height: 100%;
-	width: 100%;
-	border: 2px solid #7e7e7e;
-	border-radius: 50%;
-	border-color: rgb(159, 162, 165);
-	background-image: url('../img/profilePic4.jpg');
-	background-size: cover;
-}
-
-.greetingMessage {
-	margin-bottom: 0;
-}
-
-.greetingMessage h1 {
-	font-family: 'EB Garamond', serif;
-	font-size: 6vh;
-	color: white;
-	text-align: center;
-	margin: 0;
-}
-
-.greetingMessage h2 {
-	font-family: 'Forum', cursive;
-	font-size: 3vh;
-	color: white;
-	padding: 0 20px;
-	text-align: center;
-	margin: 0;
-}
-
-.headerTitle {
-	color: white;
-	font-family: 'EB Garamond', serif;
-	font-weight: bolder;
-	text-align: center;
-}
-
-/*Social Navigation*/
-#socialNav ul {
-	list-style-type: none;
-}
-
-#socialNav ul li {
-	padding: 0 20px;
-	height: 5vh;
-}
-
-.navImage {
-	height: 100%;
-}
-
-
-/*====================================
-======================================
-Main styles for phone
-
-======================================
-======================================*/
-
-.smallCard h2, .smallCard p {
-	font-family: 'Forum', cursive;
-	color: white;
-	padding: 0px 20px;
-	margin-top: 0px;
-}
-
-.smallCard h2, .smallCard h3, .smallCard a {
-	text-align: center;
-	color: white;
-}
-
-.smallCard a {
-	padding: 8px;
-}
-
-.smallImage {
-	display: block;
-	width: 90%;
-	margin: 20px auto;
-	padding: 20px;
-}
-
-.smallCard {
-	border: black 1px solid;
-	background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9));
-	width: 80%;
-	height: 500px;
-	margin: 20px auto;
-	box-shadow: 5px 10px 10px rgb(0, 0, 0)
-}
-
-.mainButton {
-	font-family: 'EB Garamond', serif;
-	font-weight: bold;
-  	padding: 10px 40px;
-  	border: white solid 4px;
-  	border-radius: 5px;
-  	color: white;
-  	background-color: transparent;
-  	cursor: pointer;
-  	box-shadow: 2px 2px 5px rgb(0, 0, 0)
-}
-
-.mainButton a {
-	text-decoration: none;
-	display: inline-block;
-	width: 100%;
-}
-
-/*====================================
-======================================
-Footer styles for phone
-
-======================================
-======================================*/
-
-footer {
-	margin: 0;
-	width: 100%;
-	background-color: black;
-}
-
-footer p {
-	font-family: 'Forum', cursive;
-	color: white;
-	text-align: center;
-	margin: 0;
-}
-
-/*====================================
-======================================
-Sandwich layout for phone
-
-======================================
-======================================*/
-
-/*#expandedMenuBacker {
-	top: 0;
-	z-index: 1;
-	position: fixed;
-}*/
+                                 /*LAYOUT*/
 
 #expandedMenuLander {
 	z-index: 2;
@@ -308,75 +134,272 @@ Sandwich layout for phone
 }
 
 
-/*====================================
-======================================
-Header layout for phone
 
-======================================
-======================================*/
 
+/*-----------------------------MAIN NAVIGATION----------------------------------*/
+
+								/*STYLES*/
+#mainNav {
+	display: none;
+}
+								/*LAYOUT*/
+
+/*-----------------------------DOCUMENT BACKGROUND----------------------------------*/
+
+								/*STYLES*/
+#documentWrapper {
+	background-size: cover;
+	background-position: center;
+	background-image: url('../img/mainBacker.jpg');
+}
+
+/*This sets a linear gradient transition between the banner and the main content.*/
+main {
+	background-image:  linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 30%);
+	padding-top: 8vh;
+}
+
+/*-----------------------------"HERO" BANNER----------------------------------*/
+
+								/*STYLES*/
+
+/*Sets the default phone value of the "special" elements for hero elements on larger screens*/
+.specialTagLine, .specialSocialNav, .specialGreeting {
+	display: none;
+}
+/*Hero Banner Background*/
+#mainHeader {
+	min-height: 109vh;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 99%), url('../img/titleGraphicMonitor.jpg');
+}
+
+/*Tagline Styles*/
+.tagLine {
+	background-color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+.tagLine p {
+	color: white;
+	font-family: 'Forum', cursive;
+	font-size: 1.3em;
+	padding-left: 16px;
+	margin: 20px 0px;
+	max-width: 80%;
+}
+
+/*Main Logo Styles (includes title, message, and profile pic)*/
+.mainLogo {
+	height: 37vh;
+	width: 37vh;
+	align-self: center;
+}
+
+.profilePic {
+	height: 100%;
+	width: 100%;
+	border: 2px solid #7e7e7e;
+	border-radius: 50%;
+	border-color: rgb(159, 162, 165);
+	background-image: url('../img/profilePic4.jpg');
+	background-size: cover;
+	margin: 0;
+}
+
+.headerTitle {
+	color: white;
+	font-family: 'EB Garamond', serif;
+	font-weight: bolder;
+	text-align: center;
+}
+
+.greetingMessage {
+	margin-bottom: 0;
+}
+
+.greetingMessage h1 {
+	font-family: 'EB Garamond', serif;
+	font-size: 6vh;
+	color: white;
+	text-align: center;
+	margin: 0;
+}
+
+.greetingMessage h2 {
+	font-family: 'Forum', cursive;
+	font-size: 3vh;
+	color: white;
+	padding: 0 20px;
+	text-align: center;
+	margin: 0;
+}
+
+/*Social navigation (part of the main logo in larger screens)*/
+#socialNav ul {
+	list-style-type: none;
+}
+
+#socialNav ul li {
+	padding: 0 20px;
+	height: 5vh;
+}
+
+.navImage {
+	height: 100%;
+}
+
+								/*LAYOUT*/
+/*Hero background*/
 #mainHeader {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
+/*This encapsulates and vertically centers profile pic, and all special divs in larger screens*/
 .mainLogo {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
+/*This centers main logo in middle of page |O|  */
 .mainLogo .profilePic {
 	align-self: center;
 }
 
-.profilePic {
-	margin: 0px;
-}
-
+/*Social navigation*/
 #socialNav ul {
 	display: flex;
 	justify-content: flex-end;
 }
 
 
-/*====================================
-======================================
-Main layout for phone
+/*===========================================================================================================================
 
-======================================
-======================================*/
+                            								MAIN PHONE
 
+=============================================================================================================================*/
+
+/*-----------------------------CARD STYLES----------------------------------*/
+
+								/*STYLES*/
+/*Small Card*/
+.smallCard {
+	border: black 1px solid;
+	background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9));
+	width: 80%;
+	height: 500px;
+	margin: 20px auto;
+	box-shadow: 5px 10px 10px rgb(0, 0, 0)
+}
+.smallImage {
+	display: block;
+	width: 90%;
+	margin: 20px auto;
+	padding: 20px;
+}
+.smallCard h2, .smallCard p {
+	font-family: 'Forum', cursive;
+	color: white;
+	padding: 0px 20px;
+	margin-top: 0px;
+}
+
+.smallCard h2, .smallCard h3, .smallCard a {
+	text-align: center;
+	color: white;
+}
+
+.smallCard a {
+	padding: 8px;
+}
+								/*LAYOUT*/
+/*Small Card*/
 .smallCard {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
+/*-----------------------------BUTTON STYLES----------------------------------*/
 
-/*====================================
-======================================
-Header styles for >352px
+								/*STYLES*/
+/*Button*/
+.mainButton {
+	font-family: 'EB Garamond', serif;
+	font-weight: bold;
+  	padding: 10px 40px;
+  	border: white solid 4px;
+  	border-radius: 5px;
+  	color: white;
+  	background-color: transparent;
+  	cursor: pointer;
+  	box-shadow: 2px 2px 5px rgb(0, 0, 0)
+}
+								/*LAYOUT*/
 
-======================================
-======================================*/
 
+
+/*==============================================================================================================================
+
+                           								 FOOTER PHONE
+
+================================================================================================================================*/
+
+/*-----------------------------FOOTER----------------------------------*/
+
+								/*STYLES*/
+/*footer*/
+footer {
+	margin: 0;
+	width: 100%;
+	background-color: black;
+}
+
+footer p {
+	font-family: 'Forum', cursive;
+	color: white;
+	text-align: center;
+	margin: 0;
+}
+
+								/*LAYOUT*/
+
+
+/*=================================================================================================================================
+
+                           							 HEADER SCREENS < 352PX
+
+==================================================================================================================================*/
+
+/*-----------------------------"HERO BANNER"----------------------------------*/
+
+								/*STYLES*/
+/*Tagline*/
 @media only screen and (min-width: 352px) {
 	.tagLine p {
 		font-size: 1.4em;
 	}
 }
 
-/*====================================
-======================================
-Main Navigation Styles > 700px
 
-======================================
-======================================*/
+/*=================================================================================================================================
 
+													HEADER SCREENS < 700PX
+
+===================================================================================================================================*/
+
+/*-----------------------------MAIN NAVIGATION----------------------------------*/
+
+								/*STYLES*/
 @media only screen and (min-width: 700px) {
-
 	#mainNav ul {
 		list-style-type: none;
 		background-color: black;
@@ -406,16 +429,12 @@ Main Navigation Styles > 700px
 		color: white;
 		font-family: 'Forum', cursive;
 	}
+}
 
-/*====================================
-======================================
-Main Nav Layout > 700px
-
-======================================
-======================================*/
+								/*LAYOUT*/
 
 @media only screen and (min-width: 700px) {
-
+	/*This removes the sandwich nav on screens larger than 700PX*/
 	#sandwichNavWrapper {
 		display: none;
 	}
@@ -441,46 +460,59 @@ Main Nav Layout > 700px
 	}
 }
 
-/*====================================
-======================================
-Header Layout > 700px
+/*-----------------------------HERO BANNER----------------------------------*/
 
-======================================
-======================================*/
+								/*STYLE*/
 
+/*Special Tagline*/
 @media only screen and (min-width: 700px) {
-	
-		.specialTagLine {
+	.specialTagLine {
 		color: white;
 		font-size: 6vh;
 		font-family: 'EB Garamond', serif;
 	}
 }
 
-/*====================================
-======================================
-Header Layout > 700px
-
-======================================
-======================================*/
+/*Main Logo*/
 @media only screen and (min-width: 700px) {
-/*	#socialNav {
-		visibility: hidden;
-	}*/
+	.mainLogo {
+		margin-bottom: 0;
+		/*height: 37vh;
+		width: 37vh;*/
+	}
+}
+
+/*Special Social Navigation*/
+@media only screen and (min-width: 700px) {
+	.specialSocialNav a img {
+		height: 6vh;
+		width: 6vh;
+	}
+}
+
+								/*LAYOUT*/
+
+/*Tagline (makes tagline disappear from screen at 700, but keeps height of div in place for formatting).*/
+@media only screen and (min-width: 700px) {
 	.tagLine {
 		visibility: hidden;
 	}
-	.mainLogo {
-		margin-bottom: 0;
+}
+
+/*Main Header*/
+@media only screen and (min-width: 700px) {
+	#mainHeader {
+		justify-content: space-between;
 	}
 	.profilePic {
 		position: relative;
 		top: 0vh;
 		left: 4vh;
 	}
-	#mainHeader {
-		justify-content: space-between;
-	}
+}
+
+/*Special Tagline (makes 3 special tagline spans appear from screen 700 forward).*/
+@media only screen and (min-width: 700px) {
 	.specialTagLine {
 		display: inline-block;
 	}
@@ -499,10 +531,10 @@ Header Layout > 700px
 		top: 14vh;
 		left: -18vh;
 	}
-	.specialSocialNav a img {
-		height: 6vh;
-		width: 6vh;
-	}
+}
+
+/*Special Social Span*/
+@media only screen and (min-width: 700px) {
 	.socialSpan1 {
 		position: absolute;
 		bottom: -3vh;
@@ -515,13 +547,18 @@ Header Layout > 700px
 	}
 }
 
-/*====================================
-======================================
-Header Styles > 900
 
-======================================
-======================================*/
 
+/*==============================================================================================================================
+
+                           							 HEADER SCREENS 701 - 900px
+
+===============================================================================================================================*/
+
+/*-----------------------------HERO BANNER----------------------------------*/
+
+								/*STYLES*/
+/*Special Greeting*/
 @media only screen and (min-width: 900px) {
 	.specialGreeting {
 		color: white;
@@ -534,13 +571,9 @@ Header Styles > 900
 		font-size: 4vh;
 	}
 }
-/*====================================
-======================================
-Header Layout > 900
 
-======================================
-======================================*/
-
+								/*LAYOUT*/
+/*General Formatting -- removes standard social navigation and greeting */
 @media only screen and (min-width: 900px) {
 	#socialNav {
 		visibility: hidden;
@@ -548,9 +581,18 @@ Header Layout > 900
 	.greetingMessage {
 		display: none;
 	}
-	.specialSocialNav {
-		display: inline-block;
+}
+
+/*Profile Pic -- "Moves" the profile pic from direct center on screen*/
+@media only screen and (min-width: 900px) {
+	.profilePic {
+		top: -2vh;
+		left: -11vh;
 	}
+}
+
+/*Special Greeting*/
+@media only screen and (min-width: 900px) {
 	.specialGreeting {
 		display: inline-block;
 	}
@@ -563,7 +605,15 @@ Header Layout > 900
 		position: absolute;
 		top: 7vh;
 		left: 40vh;
-		width: 49vh;
+		min-width: 49vh;
+	}
+}
+
+/*Special Social Nav*/
+
+@media only screen and (min-width: 900px) {
+	.specialSocialNav {
+		display: inline-block;
 	}
 	.socialSpan1 {
 		bottom: 5vh;
@@ -573,20 +623,229 @@ Header Layout > 900
 		bottom: -3vh;
 		right: 32vh;
 	}
+}
+
+/*==============================================================================================================================
+
+                           							 HEADER SCREENS 901 - 1200px
+
+===============================================================================================================================*/
+
+/*-----------------------------HERO BANNER----------------------------------*/
+
+							/*STYLE*/
+
+/*Profile Pic -- resizes profile pic*/
+/*@media only screen and (min-width: 1200px) {
+	.mainLogo  {
+		height: 37vh;
+		width: 37vh;
+	}
+}*/
+
+/*Special Tagline -- resize special tag line*/
+/*@media only screen and (min-width: 1200px) {
+	.specialTagLine {
+		height: 6vh;
+	}
+}*/
+
+/*Special Greeting -- resize special greeting*/
+/*@media only screen and (min-width: 1200px) {
+	.specialGreetingSpan1 {
+		font-size: 6vh;
+	}
+	.specialGreetingSpan2 {
+		font-size: 4vh;
+	}
+}*/
+
+/*Special Social -- resizes special social nav*/
+/*@media only screen and (min-width: 1200px) {
+	.specialSocialNav {
+		height: 5vh;
+		width: 5vh;
+	}
+}*/
+
+/*Special Greeting -- resizes and moves banner elements*/
+
+							/*LAYOUT*/
+/*Profile Pic -- moves profile pic*/
+/*@media only screen and (min-width: 1200px) {
 	.profilePic {
 		top: -2vh;
 		left: -11vh;
 	}
+}*/
+
+/*Special Tagline -- moves taglines*/
+/*@media only screen and (min-width: 1200px) {
+	.logoSpan1 {
+		top: -2vh;
+		left: -12vh;
+	}
+	.logoSpan2 {
+		top: 5vh;
+		left: -20vh;
+	}
+	.logoSpan3 {
+		top: 14vh;
+		left: -18vh;
+	}
+}*/
+
+/*Special Greeting -- moves greeting divs*/
+/*@media only screen and (min-width: 1200px) {
+	.specialGreetingSpan1 {
+		top: -1vh;
+		right: -28vh;
+	}
+	.specialGreetingSpan2 {
+		top: 7vh;
+		left: 40vh;
+		min-width: 49vh;
+	}
+}*/
+
+/*Special Social Nav*/
+/*@media only screen and (min-width: 1200px) {
+	.socialSpan1 {
+		bottom: 5vh;
+		right: 39vh;
+	}
+	.socialSpan2 {
+		bottom: -3vh;
+		right: 32vh;
+	}
+}*/
+
+
+
+/*==============================================================================================================================
+
+                           							 HEADER SCREENS > 1200px
+
+===============================================================================================================================*/
+
+
+/*-----------------------------HERO BANNER----------------------------------*/
+
+/*Profile Pic -- resizes profile pic*/
+/*@media only screen and (min-width: 1200px) {
+	.mainLogo  {
+		height: 37vh;
+		width: 37vh;
+	}
+}*/
+
+/*Special Tagline -- resize special tag line*/
+/*@media only screen and (min-width: 1200px) {
+	.specialTagLine {
+		height: 6vh;
+	}
+}*/
+
+/*Special Greeting -- resize special greeting*/
+/*@media only screen and (min-width: 1200px) {
+	.specialGreetingSpan1 {
+		font-size: 6vh;
+	}
+	.specialGreetingSpan2 {
+		font-size: 4vh;
+	}
+}*/
+
+/*Special Social -- resizes special social nav*/
+/*@media only screen and (min-width: 1200px) {
+	.specialSocialNav {
+		height: 5vh;
+		width: 5vh;
+	}
+}*/
+
+
+							/*LAYOUT*/
+
+/*Profile Pic -- moves profile pic*/
+/*@media only screen and (min-width: 1200px) {
+	.profilePic {
+		top: -2vh;
+		left: -11vh;
+	}
+}*/
+
+/*Special Tagline -- moves taglines*/
+/*@media only screen and (min-width: 1200px) {
+	.logoSpan1 {
+		top: -2vh;
+		left: -12vh;
+	}
+	.logoSpan2 {
+		top: 5vh;
+		left: -20vh;
+	}
+	.logoSpan3 {
+		top: 14vh;
+		left: -18vh;
+	}
+}*/
+
+/*Special Greeting -- moves greeting divs*/
+/*@media only screen and (min-width: 1200px) {
+	.specialGreetingSpan1 {
+		top: -1vh;
+		right: -28vh;
+	}
+	.specialGreetingSpan2 {
+		top: 7vh;
+		left: 40vh;
+		min-width: 49vh;
+	}
+}*/
+
+/*Special Social Nav*/
+/*@media only screen and (min-width: 1200px) {
+	.socialSpan1 {
+		bottom: 5vh;
+		right: 39vh;
+	}
+	.socialSpan2 {
+		bottom: -3vh;
+		right: 32vh;
+	}
+}*/
+
+
+
+/*==============================================================================================================================
+
+                           							 HEADER SCREENS > 1200px
+
+===============================================================================================================================*/
+
+
+
+								/*STYLES*/
+
+/*@media only screen and (min-width: 1800px) {
+	html {
+		max-width: 1800px;
+		background-color: black;
+		margin: auto;
+	}	
 }
+*/
 
+/*-----------------------------MAIN NAVIGATION----------------------------------*/
 
-/*====================================
-======================================
-Header Layout > 1200
-
-======================================
-======================================*/
-
-@media only screen and (min-width: 1200px) {
-	
-}
+/*@media only screen and (min-width: 1800px) {
+	#mainNav {
+		max-width: 1800px;
+		margin: auto;
+	}
+	#mainNav ul {
+		max-width: 1800px;
+		margin: auto;
+	}
+}*/
