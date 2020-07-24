@@ -425,10 +425,13 @@ Main Navigation Styles > 700px
 	}
 
 	#mainNav ul li a {
-		margin-top: 4px;
+		width: 100%;
+		height: 100%;
+		padding-top: 15px;
 		text-decoration: none;
 		color: white;
 		font-family: 'Forum', cursive;
+		font-size: 1.2em;
 	}
 
 /*====================================

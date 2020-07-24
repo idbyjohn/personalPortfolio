@@ -424,10 +424,13 @@ footer p {
 	}
 
 	#mainNav ul li a {
-		margin-top: 4px;
+		height: 100%;
+		width: 100%;
+		padding-top: 15px;
 		text-decoration: none;
 		color: white;
 		font-family: 'Forum', cursive;
+		font-size: 1.2em;
 	}
 }
 
