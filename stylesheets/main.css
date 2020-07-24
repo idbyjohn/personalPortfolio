@@ -169,7 +169,7 @@ main {
 }
 /*Hero Banner Background*/
 #mainHeader {
-	min-height: 109vh;
+	min-height: 100vh;
 	background-size: cover;
 	background-position: center;
 	background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 99%), url('../img/titleGraphicMonitor.jpg');

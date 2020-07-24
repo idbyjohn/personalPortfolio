@@ -143,12 +143,16 @@ Document Background and Header styles for phone
 ======================================
 ======================================*/
 
-/*Document Background*/
-#documentWrapper {
+/*Static Background*/
+
+#staticBackground {
 	background-size: cover;
 	background-position: center;
 	background-image: url('../img/mainBacker.jpg');
-	min-height: 100vh;
+	height: 100vh;
+	width: 100vw;
+	z-index: -100;
+	position: fixed;
 }
 
 /*Document Header*/
@@ -175,7 +179,7 @@ Document Background and Header styles for phone
 }
 
 .secondaryTitle h1 {
-	font-size: 5vh;
+	font-size: 2.5em;
 	color: white;
 	font-family: 'EB Garamond', serif;
 	font-weight: bolder;
@@ -193,24 +197,28 @@ Main styles for phone
 
 .smallCard {
 	border: black 1px solid;
-	background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9));
-	width: 80%;
+	background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8));
+	width: 95%;
 	margin: 20px auto;
 	box-shadow: 5px 10px 10px rgb(0, 0, 0);
 }
 
 .turnoverApt {
-	margin-top: 70px;
+	margin-top: 68px;
 }
 
 .smallCard h2 {
-	font-size: 3.3vh;
-	border: white solid 2px;
-	margin-top: 20px;
+	background-color: black;
+	font-size: 1.7em;
+	font-family: 'EB Garamond', serif;
+	padding: 20px;
+	margin: 0;
+	text-align: center;
 }
 
-.smallCard h2, .smallCard p, .smallCard a {
+.smallCard p, .smallCard a {
 	font-family: 'Forum', cursive;
+	font-size: 1.2em;
 	color: white;
 	padding: 0px 20px;
 	margin-top: 0px;
@@ -237,12 +245,10 @@ Main styles for phone
 }
 
 .summaryPurpose {
-	text-align: justify;
 	padding: 20px;
 }
 
 .fileDownloads {
-	text-align: justify;
 	padding: 20px;
 }
 
@@ -276,6 +282,7 @@ Main and Header Layout for phone
 
 ======================================
 ======================================*/
+
 
 #documentWrapper {
 	display: flex;
@@ -344,9 +351,11 @@ Main Styles for >768px
 ======================================*/
 
 @media (min-width: 768px) {
-	.smallCard {
-		width: 85%;
+
+	.turnoverApt {
+		margin-top: 28px;
 	}
+
 	.smallCard h2 {
 		width: 100%;
 		padding: 20px;
@@ -378,7 +387,7 @@ Main Styles for >768px
 		margin: 0;
 		padding:16px 0px;
 	}
-	.summaryPurposeWrapper, .fileDownloadsWrapper {
+	.fileDownloadsWrapper {
 	border: 0.5px solid white;
 	}
 }
