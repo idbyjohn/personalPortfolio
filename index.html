@@ -46,10 +46,32 @@
 					 Dropdown for About also includes a link to "Download Resume" which will download my resume.  It will also make the dropdown menu disappear w/ javascript. -->
 				<nav id="mainNav">
 					<ul>
-						<li><a id="idMainNav" href="C://Users/keena/Desktop/newPortfolio/secondaryPages/id.html">Instructional Design</a></li>
-						<li><a id="webMainNav" href="#">Web Design</a></li>
-						<li><a id="aboutMainNav" href="#">About</a></li>
-						<li><a id="thanksMainNav" href="#">Special Thanks</a></li>
+						<li id= "firstMainNav" class= "mainExpanderMenu">
+							<a class="mainMenuButton" href="C://Users/keena/Desktop/newPortfolio/secondaryPages/id.html">Instructional Design</a>
+							<ul>
+								<!-- <li class= "createdLi"><a href="#">TAP Basic Setup</a></li>
+								<li class= "createdLi"><a href="#">Brewing Beer at Home</a></li> -->
+							</ul>
+						</li>
+						<li id="webMainNav" class="mainExpanderMenu">
+							<a class="mainMenuButton" href="#">Web Design</a>
+							<ul>
+								<!-- <li class= "createdLi"><a href="#">Portfolio Site</a></li>
+								<li class= "createdLi"><a href="#">Buck Bald Brewing</a></li> -->
+							</ul>
+						</li>
+						
+						<li id="aboutMainNav" class="mainExpanderMenu" >
+							<a class="mainMenuButton" href="#">About</a>
+							<ul>
+								<!-- <li class= "createdLi"><a href="#">About Me</a></li>
+								<li class= "createdLi"><a href="#">Resume</a></li> -->
+							</ul>
+						</li>
+
+						<li id="thanksMainNav" class="mainExpanderMenu">
+							<a class="mainMenuButton" href="#">Special Thanks</a>
+						</li>
 					</ul>
 				</nav>
 				<div class="tagLine">
@@ -86,5 +108,6 @@
 			</footer>
 		</div>
 		<script src="C://Users/keena/Desktop/newPortfolio/js/sandwich.js"></script>
+		<!-- <script src="C://Users/keena/Desktop/newPortfolio/js/mainMenu.js"></script> -->
 	</body>
 </html>

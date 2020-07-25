@@ -147,17 +147,17 @@
 /*-----------------------------DOCUMENT BACKGROUND----------------------------------*/
 
 								/*STYLES*/
-#documentWrapper {
+/*#documentWrapper {
 	background-size: cover;
 	background-position: center;
 	background-image: url('../img/mainBacker.jpg');
-}
+}*/
 
 /*This sets a linear gradient transition between the banner and the main content.*/
-main {
+/*main {
 	background-image:  linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 30%);
 	padding-top: 8vh;
-}
+}*/
 
 /*-----------------------------"HERO" BANNER----------------------------------*/
 
@@ -400,7 +400,9 @@ footer p {
 
 								/*STYLES*/
 @media only screen and (min-width: 700px) {
-	#mainNav ul {
+
+	/*These are styles for the main buttons at the top of the page */
+	#mainNav ul:first-child {
 		list-style-type: none;
 		background-color: black;
 		margin: 0;
@@ -409,13 +411,15 @@ footer p {
 		width: 100%;
 	}
 
-	#mainNav ul li{
+	#firstMainNav, #webMainNav, #aboutMainNav, #thanksMainNav{
+		position: static;
 		padding: 10px;
 		text-align: center;
 		margin: 0px 20px;
+		/*background-color: orange;*/
 	}
 
-	#mainNav ul li:hover {
+	#mainNav ul:first-child li:hover {
 		background-color: rgb(35, 39, 41);
 	}
 
@@ -423,14 +427,87 @@ footer p {
 		margin-right: auto;
 	}
 
-	#mainNav ul li a {
+	/*#mainNav ul:first-child li {
+		padding: 0 10px;
+	}*/
+
+	#mainNav ul:first-child li a {
 		height: 100%;
 		width: 100%;
-		padding-top: 15px;
+		padding-top: 12px;
 		text-decoration: none;
 		color: white;
 		font-family: 'Forum', cursive;
 		font-size: 1.2em;
+	}
+
+	/*Positions the empty UL absolute from the parent firstMainNav (static)*/
+	#mainNav .mainExpanderMenu ul:last-child {
+		position: absolute;
+		list-style-type: none;
+		padding-left: 0px;
+	}
+
+	#mainNav .mainExpanderMenu ul:last-child li:hover {
+		background-color: black;
+	}
+
+	#mainNav .mainExpanderMenu ul:last-child li {
+		/*padding: 20px;*/
+		background-color: rgb(35, 39, 41);
+		text-align: left;
+		border: 0.5px white solid;
+	}
+
+	#mainNav .mainExpanderMenu ul:last-child li a {
+		padding: 20px;
+		padding-top: 20px;
+		font-size: 1em;
+		font-family: 'Forum', cursive;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+	}
+
+	#firstMainNav ul:last-child{
+		bottom: -116px;
+		left: 20px;
+		height: 0px;
+		width: 206px;
+	}
+
+	#webMainNav ul:last-child {
+		bottom: -116px;
+		left: 235px;
+		height: 0px;
+		width: 206px;
+	}
+
+	#aboutMainNav ul:last-child {
+		bottom: -116px;
+		left: 385px;
+		height: 0px;
+		width: 206px;
+	}
+
+
+
+	/*Styles the li's that populate the above UL*/
+	.createdLi {
+		display: none;
+
+	}
+
+	.createdLi a {
+		
+	}
+
+	.invisible {
+		display: none;
+	}
+
+	.visible {
+		display: block;
 	}
 }
 
@@ -450,7 +527,7 @@ footer p {
 		z-index: 1; 
 	}
 
-	#mainNav ul {
+	#mainNav ul:first-child {
 		display: flex;
 		align-items: stretch;
 		justify-content: space-around;
