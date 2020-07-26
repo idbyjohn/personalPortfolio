@@ -449,12 +449,12 @@ footer p {
 	}
 
 	#mainNav .mainExpanderMenu ul:last-child li:hover {
-		background-color: black;
+		background-color: rgba(0, 0, 0, 0.7);
 	}
 
 	#mainNav .mainExpanderMenu ul:last-child li {
 		/*padding: 20px;*/
-		background-color: rgb(35, 39, 41);
+		background-color: rgba(35, 39, 41, 0.7);
 		text-align: left;
 		border: 0.5px white solid;
 	}
@@ -470,45 +470,26 @@ footer p {
 	}
 
 	#firstMainNav ul:last-child{
-		bottom: -116px;
-		left: 20px;
+		bottom: 0px;
+		left: 18px;
 		height: 0px;
 		width: 206px;
 	}
 
 	#webMainNav ul:last-child {
-		bottom: -116px;
+		bottom: 0px;
 		left: 235px;
 		height: 0px;
 		width: 206px;
 	}
 
 	#aboutMainNav ul:last-child {
-		bottom: -116px;
+		bottom: 0px;
 		left: 385px;
 		height: 0px;
 		width: 206px;
 	}
 
-
-
-	/*Styles the li's that populate the above UL*/
-	.createdLi {
-		display: none;
-
-	}
-
-	.createdLi a {
-		
-	}
-
-	.invisible {
-		display: none;
-	}
-
-	.visible {
-		display: block;
-	}
 }
 
 								/*LAYOUT*/
