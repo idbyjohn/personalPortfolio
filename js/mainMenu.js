@@ -1,18 +1,20 @@
 // Selects the main nav nav tag.
 let mainNav = document.getElementById('mainNav');
-// Selects all of the main menu buttons by class.
-// let mainMenuButton = document.getElementsByClassName('mainMenuButton');
 
+// Selects all of the main menu buttons by class.
 const mainExpanderMenu = document.getElementsByClassName('mainExpanderMenu');
-// DOM selection of parent LI elements and Objects to Build LI elements off of child UL element.
+
+
+// DOM selection of parent LI elements and Objects to Build LI elements off of open UL element listed below..
+const homeMainNav = document.getElementById('homeMainNav');
 
 const firstMainNav = document.getElementById('firstMainNav');
 const firstMainNavBuilder = [ {href: "C://Users/keena/Desktop/newPortfolio/secondaryPages/id.html", text: "TAP Basic Setup", class:"liFirstMainNav"},
-							 {href: "C://Users/keena/Desktop/newPortfolio/secondaryPages/id.html", text: "Brewing Beer at Home", class:"liFirstMainNav"} ];
+							 {href: "C://Users/keena/Desktop/newPortfolio/secondaryPages/id.html#homeBrew", text: "Brewing Beer at Home", class:"liFirstMainNav"} ];
 
 const webMainNav = document.getElementById('webMainNav');
-const webMainNavBuilder = [ {href: "#", text: "Personal Portfolio", class: "liWebMainNav"},
-							{href: "#", text: "Buck Bald Brewing", class: "liWebMainNav"} ];
+const webMainNavBuilder = [ {href: "C://Users/keena/Desktop/newPortfolio/secondaryPages/web.html#myPortfolio", text: "Personal Portfolio", class: "liWebMainNav"},
+							{href: "C://Users/keena/Desktop/newPortfolio/secondaryPages/web.html", text: "Buck Bald Brewing", class: "liWebMainNav"} ];
 
 const aboutMainNav = document.getElementById('aboutMainNav');
 const aboutMainNavBuilder = [ {href: "#", text: "About Me", class: "liAboutNav"}, 
@@ -20,7 +22,10 @@ const aboutMainNavBuilder = [ {href: "#", text: "About Me", class: "liAboutNav"}
 
 const thanksMainNav = document.getElementById('thanksMainNav');
 
+//Selects the open UL tag that is the first child of the main LI's listed above.
 const openUL = document.getElementsByClassName('openUL')
+
+///Selects the classnames of the newly created LI tags.
 const liFirstMainNav = document.getElementsByClassName('liFirstMainNav');
 const liWebMainNav = document.getElementsByClassName('liWebMainNav');
 const liAboutNav = document.getElementsByClassName('liAboutNav');
@@ -29,9 +34,8 @@ const liAboutNav = document.getElementsByClassName('liAboutNav');
 
 
 /// selects the id of the LI that we are targeting (through domSelector argument). Selects the last child of that LI (which is an empty UL that we will build on.)
-/// creates new li element off of the empty UL.  Li attributes include text, class, and href.
+/// creates new li element off of the empty UL.  Li attributes include text, class, and href. Loops through object and repeats the process.
 function boxAppear (domSelector, objectSelector) {
-	console.log('mouseon event triggered');
 	objectSelector.forEach( (arg) => {
 		let lastChild = domSelector.lastElementChild;
 		let newLi = document.createElement('LI');
@@ -40,59 +44,55 @@ function boxAppear (domSelector, objectSelector) {
 	});
 }
 
-/// makes the blue box disappear from the now-populated UL element
+/// loops through and removes all of the li elements until lastChild.hasChildNodes() evaluates to false
 function boxDisappear (domSelector) {
-	console.log('mouseleave event triggered');
 	let lastChild = domSelector.lastElementChild;
 	while (lastChild.hasChildNodes()) {
 		lastChild.removeChild(lastChild.firstChild);
 	}
 }
 
-/// listens for mouseover of the a tag with class mainMenu button and runs boxAppear()
+/// listens for mouseover of the a tag with class mainExpanderMenu button and runs boxAppear() for target, and boxDisappear() for all others.  Also checks to see if the 
+/// newly created li is on the DOM using the contains() method.  This ensures that no more than one copy is created on the DOM when you roll over the mainExpanderMenu button
 mainNav.addEventListener('mouseover', () => {
-	if (event.target === mainExpanderMenu[0]  && openUL[0].contains(liFirstMainNav[0]) !== true) {
+	if (event.target === mainExpanderMenu[0]) {
+		boxDisappear(firstMainNav);
+		boxDisappear(webMainNav);
+		boxDisappear(aboutMainNav);
+	} else if (event.target === mainExpanderMenu[1]  && openUL[0].contains(liFirstMainNav[0]) !== true) {
 		boxAppear(firstMainNav, firstMainNavBuilder);
 		boxDisappear(webMainNav);
 		boxDisappear(aboutMainNav);
-	} else if (event.target === mainExpanderMenu[1] && openUL[1].contains(liWebMainNav[0]) !== true) {
+	} else if (event.target === mainExpanderMenu[2] && openUL[1].contains(liWebMainNav[0]) !== true) {
 		boxAppear(webMainNav, webMainNavBuilder);
 		boxDisappear(firstMainNav); 
 		boxDisappear(aboutMainNav);
-	} else if (event.target === mainExpanderMenu[2] && openUL[2].contains(liAboutNav[0]) !== true) {
+	} else if (event.target === mainExpanderMenu[3] && openUL[2].contains(liAboutNav[0]) !== true) {
 		boxAppear(aboutMainNav, aboutMainNavBuilder);
 		boxDisappear(webMainNav);
 		boxDisappear(firstMainNav);
-	} else if (event.target === mainExpanderMenu[3]) {
+	} else if (event.target === mainExpanderMenu[4]) {
 		boxDisappear(webMainNav);
 		boxDisappear(aboutMainNav);
 		boxDisappear(firstMainNav);
 	}
 });
 
-// mainNav.addEventListener('mouseleave', () => {
-// 	if (event.target !== mainExpanderMenu[0]) {
-// 		boxDisappear(firstMainNav);
-// 	} else if (event.target !== mainExpanderMenu[1]) {
-// 		boxDisappear(webMainNav);
-// 	} else if (event.target !== mainExpanderMenu[2])
-// 		boxDisappear(aboutMainNav);
-// });
-
-mainNav.addEventListener('mouseleave', () => {
-	if (event.target !== mainExpanderMenu[0]) {
-		boxDisappear(firstMainNav);
-	}
-});
 
 mainNav.addEventListener('mouseleave', () => {
 	if (event.target !== mainExpanderMenu[1]) {
-		boxDisappear(webMainNav);
+		boxDisappear(firstMainNav);
 	}
 });
 
 mainNav.addEventListener('mouseleave', () => {
 	if (event.target !== mainExpanderMenu[2]) {
+		boxDisappear(webMainNav);
+	}
+});
+
+mainNav.addEventListener('mouseleave', () => {
+	if (event.target !== mainExpanderMenu[3]) {
 		boxDisappear(aboutMainNav);
 	}
 });
@@ -100,5 +100,5 @@ mainNav.addEventListener('mouseleave', () => {
 
 
 
-// When you mouse over onto a new mainExpanderMenu, run boxDisappear on the adjacent menus w/in the mainNav mouseover function.
+//You will need to set the affected button to display: none
 

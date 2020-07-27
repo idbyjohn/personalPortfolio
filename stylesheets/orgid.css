@@ -388,17 +388,45 @@ footer p {
 
 ===================================================================================================================================*/
 
-/*-----------------------------MAIN HEADER----------------------------------*/
-
-@media (min-width: 700px) {
-	.tagline p {
-		display: hidden;
-	}
-}
-
 /*-----------------------------MAIN NAVIGATION----------------------------------*/
 
 								/*STYLES*/
+/*@media only screen and (min-width: 700px) {
+
+	#mainNav ul {
+		list-style-type: none;
+		background-color: black;
+		margin: 0;
+		padding: 0;
+		height: 65px;
+		width: 100%;
+	}
+
+	#mainNav ul li{
+		padding: 10px;
+		text-align: center;
+		margin: 0px 20px;
+	}
+
+	#mainNav ul li:hover {
+		background-color: rgb(35, 39, 41);
+	}
+
+	#mainNav ul li:last-child {
+		margin-right: auto;
+	}
+
+	#mainNav ul li a {
+		width: 100%;
+		height: 100%;
+		padding-top: 15px;
+		text-decoration: none;
+		color: white;
+		font-family: 'Forum', cursive;
+		font-size: 1.2em;
+	}
+}*/
+
 @media only screen and (min-width: 700px) {
 
 	/*These are styles for the main buttons at the top of the page */
@@ -412,9 +440,15 @@ footer p {
 	}
 
 	#homeMainNav, #firstMainNav, #webMainNav, #aboutMainNav, #thanksMainNav{
+		position: static;
 		padding: 10px;
 		text-align: center;
 		margin: 0px 20px;
+		/*background-color: orange;*/
+	}
+
+	#mainNav #firstMainNav {
+		display: none;
 	}
 
 	#mainNav ul:first-child li:hover {
@@ -465,12 +499,74 @@ footer p {
 		width: 100%;
 		height: 100%;
 	}
+
+	#homeMainNav ul:last-child{
+		bottom: 0px;
+		left: 18px;
+		height: 0px;
+		width: 206px;
+	}
+
+	#firstMainNav ul:last-child{
+		bottom: 0px;
+		left: 18px;
+		height: 0px;
+		width: 206px;
+	}
+
+	#webMainNav ul:last-child {
+		bottom: 0px;
+		left: 126px;
+		height: 0px;
+		width: 206px;
+	}
+
+	#aboutMainNav ul:last-child {
+		bottom: 0px;
+		left: 276px;
+		height: 0px;
+		width: 206px;
+	}
+
 }
 								/*LAYOUT*/
 
+/*@media only screen and (min-width: 700px) {
+
+	#sandwichNavWrapper {
+		display: none;
+	}
+	#sandwichNav {
+		display: none;
+	}
+	#mainNav {
+		display: flex;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		width: 100%;
+		z-index: 1; 
+	}
+
+	#mainNav ul {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-around;
+	}
+
+	#mainNav ul li {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}*/
 @media only screen and (min-width: 700px) {
 	/*This removes the sandwich nav on screens larger than 700PX*/
 	#sandwichNavWrapper {
+		display: none;
+	}
+
+	#sandwichNav {
 		display: none;
 	}
 
@@ -493,36 +589,6 @@ footer p {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-	}
-
-	#homeMainNav, #firstMainNav, #webMainNav, #aboutMainNav, #thanksMainNav {
-		position: static;
-	}
-
-	#mainNav #homeMainNav {
-		display: none;
-	}
-
-	#firstMainNav ul:last-child{
-		position: absolute;
-		bottom: 0px;
-		left: 18px;
-		height: 0px;
-		width: 206px;
-	}
-
-	#webMainNav ul:last-child {
-		bottom: 0px;
-		left: 235px;
-		height: 0px;
-		width: 206px;
-	}
-
-	#aboutMainNav ul:last-child {
-		bottom: 0px;
-		left: 385px;
-		height: 0px;
-		width: 206px;
 	}
 }
 
@@ -602,5 +668,4 @@ footer p {
 	.homeBrew .smallCardContent .fileDownloads .fileDownloadsWrapper p {
 		padding-top: 12px;
 	}
-
 }

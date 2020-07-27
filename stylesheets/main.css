@@ -411,12 +411,16 @@ footer p {
 		width: 100%;
 	}
 
-	#firstMainNav, #webMainNav, #aboutMainNav, #thanksMainNav{
+	#homeMainNav, #firstMainNav, #webMainNav, #aboutMainNav, #thanksMainNav{
 		position: static;
 		padding: 10px;
 		text-align: center;
 		margin: 0px 20px;
 		/*background-color: orange;*/
+	}
+
+	#mainNav #homeMainNav {
+		display: none;
 	}
 
 	#mainNav ul:first-child li:hover {
@@ -449,12 +453,11 @@ footer p {
 	}
 
 	#mainNav .mainExpanderMenu ul:last-child li:hover {
-		background-color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(35, 39, 41, 0.7);
 	}
 
 	#mainNav .mainExpanderMenu ul:last-child li {
-		/*padding: 20px;*/
-		background-color: rgba(35, 39, 41, 0.7);
+		background-color: rgba(0, 0, 0, 0.7);
 		text-align: left;
 		border: 0.5px white solid;
 	}
@@ -467,6 +470,13 @@ footer p {
 		display: inline-block;
 		width: 100%;
 		height: 100%;
+	}
+
+	#homeMainNav ul:last-child{
+		bottom: 0px;
+		left: 18px;
+		height: 0px;
+		width: 206px;
 	}
 
 	#firstMainNav ul:last-child{
