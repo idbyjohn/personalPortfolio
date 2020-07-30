@@ -13,6 +13,26 @@
 	border: solid red 2px;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 
 /*======================================================================================================================
@@ -77,26 +97,18 @@
 }
 
 #expandedMenu {
-	background: linear-gradient(rgba(126 ,126, 126, 0.8),rgba(126 ,126, 126, 0.8));
+	background: rgba(35, 39, 41, 0.8);
 	border-radius: 5px;
 	width: 100%;
 }
 
 #expandedMenu ul {
 	list-style-type: none;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0));
+	
 	text-align: center;
 }
 #expandedMenu li {
 	padding: 16px;
-}
-
-#expandedMenu li:first-child {
-	margin-top: 46px;
-}
-
-#expandedMenu li:last-child {
-	margin-bottom: 46px;
 }
 
 #expandedMenu li a {
@@ -147,17 +159,12 @@
 /*-----------------------------DOCUMENT BACKGROUND----------------------------------*/
 
 								/*STYLES*/
-/*#documentWrapper {
-	background-size: cover;
-	background-position: center;
-	background-image: url('../img/mainBacker.jpg');
-}*/
+html {
+	max-width: 2500px;
+	margin: 0 auto;
+	background-color: black;
+}
 
-/*This sets a linear gradient transition between the banner and the main content.*/
-/*main {
-	background-image:  linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 30%);
-	padding-top: 8vh;
-}*/
 
 /*-----------------------------"HERO" BANNER----------------------------------*/
 
@@ -280,72 +287,92 @@
 	justify-content: flex-end;
 }
 
-
-/*===========================================================================================================================
-
-                            								MAIN PHONE
-
-=============================================================================================================================*/
-
-/*-----------------------------CARD STYLES----------------------------------*/
+/*-----------------------------ABOUT MODAL----------------------------------*/
 
 								/*STYLES*/
-/*Small Card*/
-.smallCard {
-	border: black 1px solid;
-	background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9));
-	width: 80%;
-	height: 500px;
-	margin: 20px auto;
-	box-shadow: 5px 10px 10px rgb(0, 0, 0)
-}
-.smallImage {
-	display: block;
-	width: 90%;
-	margin: 20px auto;
-	padding: 20px;
-}
-.smallCard h2, .smallCard p {
-	font-family: 'Forum', cursive;
-	color: white;
-	padding: 0px 20px;
-	margin-top: 0px;
+
+/*Modal Backsplash*/
+#modalBacksplash {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(61, 66, 69, 0.7);
+	z-index: 4;
 }
 
-.smallCard h2, .smallCard h3, .smallCard a {
+/*About Modal */
+
+.secondPic {
+max-height: 60%;
+}
+
+#aboutContent {
+	max-height: 80%;
+	overflow: auto;
+	width: 80%;
+	padding: 30px;
+	background-color: black;
+	border-radius: 5px;
+	color: white;
+	font-family: 'Forum', cursive;
+	font-size: 1.1em;
+}
+
+.modalLink {
 	text-align: center;
 	color: white;
+	font-size: 1.3em;
+	font-family: 'EB Garamond', serif;
 }
 
-.smallCard a {
-	padding: 8px;
+.modalLink:visited{
+	color: white;
 }
+
+#closeButton {
+	height: 32px;
+	width: 32px;
+}
+
+#closeButton:hover {
+	cursor: pointer;
+}
+
+.closeButton {
+	height: 100%;
+	width: 100%;
+}
+
+
+
+
 								/*LAYOUT*/
-/*Small Card*/
-.smallCard {
+#modalBacksplash {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#aboutContent {
+	align-self: center;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
-/*-----------------------------BUTTON STYLES----------------------------------*/
-
-								/*STYLES*/
-/*Button*/
-.mainButton {
-	font-family: 'EB Garamond', serif;
-	font-weight: bold;
-  	padding: 10px 40px;
-  	border: white solid 4px;
-  	border-radius: 5px;
-  	color: white;
-  	background-color: transparent;
-  	cursor: pointer;
-  	box-shadow: 2px 2px 5px rgb(0, 0, 0)
+.secondPic {
+	align-self: center;
 }
-								/*LAYOUT*/
 
-
+#closeButton {
+	position: absolute;
+	right: 4px;
+	top: 4px;
+}
 
 /*==============================================================================================================================
 
@@ -513,7 +540,6 @@ footer p {
 		display: flex;
 		position: fixed;
 		top: 0px;
-		right: 0px;
 		width: 100%;
 		z-index: 1; 
 	}
@@ -618,6 +644,20 @@ footer p {
 	}
 }
 
+/*-----------------------------ABOUT MODAL----------------------------------*/
+
+								/*STYLES*/
+
+
+/*About Modal */
+
+@media only screen and (min-width: 700px) {
+	#aboutContent {
+	width: 50%;
+	}
+}
+
+								/*LAYOUT*/
 
 
 /*==============================================================================================================================
@@ -696,227 +736,24 @@ footer p {
 	}
 }
 
+/*-----------------------------ABOUT MODAL----------------------------------*/
+
+								/*STYLES*/
+
+
+/*About Modal */
+
+@media only screen and (min-width: 700px) {
+	#aboutContent {
+	width: 40%;
+	}
+}
+
+								/*LAYOUT*/
+
 /*==============================================================================================================================
 
                            							 HEADER SCREENS 901 - 1200px
 
 ===============================================================================================================================*/
 
-/*-----------------------------HERO BANNER----------------------------------*/
-
-							/*STYLE*/
-
-/*Profile Pic -- resizes profile pic*/
-/*@media only screen and (min-width: 1200px) {
-	.mainLogo  {
-		height: 37vh;
-		width: 37vh;
-	}
-}*/
-
-/*Special Tagline -- resize special tag line*/
-/*@media only screen and (min-width: 1200px) {
-	.specialTagLine {
-		height: 6vh;
-	}
-}*/
-
-/*Special Greeting -- resize special greeting*/
-/*@media only screen and (min-width: 1200px) {
-	.specialGreetingSpan1 {
-		font-size: 6vh;
-	}
-	.specialGreetingSpan2 {
-		font-size: 4vh;
-	}
-}*/
-
-/*Special Social -- resizes special social nav*/
-/*@media only screen and (min-width: 1200px) {
-	.specialSocialNav {
-		height: 5vh;
-		width: 5vh;
-	}
-}*/
-
-/*Special Greeting -- resizes and moves banner elements*/
-
-							/*LAYOUT*/
-/*Profile Pic -- moves profile pic*/
-/*@media only screen and (min-width: 1200px) {
-	.profilePic {
-		top: -2vh;
-		left: -11vh;
-	}
-}*/
-
-/*Special Tagline -- moves taglines*/
-/*@media only screen and (min-width: 1200px) {
-	.logoSpan1 {
-		top: -2vh;
-		left: -12vh;
-	}
-	.logoSpan2 {
-		top: 5vh;
-		left: -20vh;
-	}
-	.logoSpan3 {
-		top: 14vh;
-		left: -18vh;
-	}
-}*/
-
-/*Special Greeting -- moves greeting divs*/
-/*@media only screen and (min-width: 1200px) {
-	.specialGreetingSpan1 {
-		top: -1vh;
-		right: -28vh;
-	}
-	.specialGreetingSpan2 {
-		top: 7vh;
-		left: 40vh;
-		min-width: 49vh;
-	}
-}*/
-
-/*Special Social Nav*/
-/*@media only screen and (min-width: 1200px) {
-	.socialSpan1 {
-		bottom: 5vh;
-		right: 39vh;
-	}
-	.socialSpan2 {
-		bottom: -3vh;
-		right: 32vh;
-	}
-}*/
-
-
-
-/*==============================================================================================================================
-
-                           							 HEADER SCREENS > 1200px
-
-===============================================================================================================================*/
-
-
-/*-----------------------------HERO BANNER----------------------------------*/
-
-/*Profile Pic -- resizes profile pic*/
-/*@media only screen and (min-width: 1200px) {
-	.mainLogo  {
-		height: 37vh;
-		width: 37vh;
-	}
-}*/
-
-/*Special Tagline -- resize special tag line*/
-/*@media only screen and (min-width: 1200px) {
-	.specialTagLine {
-		height: 6vh;
-	}
-}*/
-
-/*Special Greeting -- resize special greeting*/
-/*@media only screen and (min-width: 1200px) {
-	.specialGreetingSpan1 {
-		font-size: 6vh;
-	}
-	.specialGreetingSpan2 {
-		font-size: 4vh;
-	}
-}*/
-
-/*Special Social -- resizes special social nav*/
-/*@media only screen and (min-width: 1200px) {
-	.specialSocialNav {
-		height: 5vh;
-		width: 5vh;
-	}
-}*/
-
-
-							/*LAYOUT*/
-
-/*Profile Pic -- moves profile pic*/
-/*@media only screen and (min-width: 1200px) {
-	.profilePic {
-		top: -2vh;
-		left: -11vh;
-	}
-}*/
-
-/*Special Tagline -- moves taglines*/
-/*@media only screen and (min-width: 1200px) {
-	.logoSpan1 {
-		top: -2vh;
-		left: -12vh;
-	}
-	.logoSpan2 {
-		top: 5vh;
-		left: -20vh;
-	}
-	.logoSpan3 {
-		top: 14vh;
-		left: -18vh;
-	}
-}*/
-
-/*Special Greeting -- moves greeting divs*/
-/*@media only screen and (min-width: 1200px) {
-	.specialGreetingSpan1 {
-		top: -1vh;
-		right: -28vh;
-	}
-	.specialGreetingSpan2 {
-		top: 7vh;
-		left: 40vh;
-		min-width: 49vh;
-	}
-}*/
-
-/*Special Social Nav*/
-/*@media only screen and (min-width: 1200px) {
-	.socialSpan1 {
-		bottom: 5vh;
-		right: 39vh;
-	}
-	.socialSpan2 {
-		bottom: -3vh;
-		right: 32vh;
-	}
-}*/
-
-
-
-/*==============================================================================================================================
-
-                           							 HEADER SCREENS > 1200px
-
-===============================================================================================================================*/
-
-
-
-								/*STYLES*/
-
-/*@media only screen and (min-width: 1800px) {
-	html {
-		max-width: 1800px;
-		background-color: black;
-		margin: auto;
-	}	
-}
-*/
-
-/*-----------------------------MAIN NAVIGATION----------------------------------*/
-
-/*@media only screen and (min-width: 1800px) {
-	#mainNav {
-		max-width: 1800px;
-		margin: auto;
-	}
-	#mainNav ul {
-		max-width: 1800px;
-		margin: auto;
-	}
-}*/

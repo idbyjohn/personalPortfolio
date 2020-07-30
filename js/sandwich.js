@@ -42,14 +42,3 @@ expandedMenuLander.addEventListener('click', function () {
 	expandedMenuLander.style.display = "none";
 });
 
-
-
-// let sandwichNav = document.querySelector('#sandwichNav');
-// let expandedMenuWrapper = document.querySelector('#expandedMenuWrapper');
-// let expandedMenuLander = document.querySelector('#expandedMenuLander');
-// let tagLineLander = document.querySelector('.tagLine');
-
-
-// sandwichNav.addEventListener('click', () => {
-// 	expandedMenuWrapper.style.height = `312px`;
-// });

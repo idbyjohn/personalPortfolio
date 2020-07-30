@@ -9,16 +9,16 @@ const mainExpanderMenu = document.getElementsByClassName('mainExpanderMenu');
 const homeMainNav = document.getElementById('homeMainNav');
 
 const firstMainNav = document.getElementById('firstMainNav');
-const firstMainNavBuilder = [ {href: "C://Users/keena/Desktop/newPortfolio/secondaryPages/id.html", text: "TAP Basic Setup", class:"liFirstMainNav"},
-							 {href: "C://Users/keena/Desktop/newPortfolio/secondaryPages/id.html#homeBrew", text: "Brewing Beer at Home", class:"liFirstMainNav"} ];
+const firstMainNavBuilder = [ {href: "http://instructionaldesignbyjohn.com/secondaryPages/id.html", text: "TAP Basic Setup", class:"liFirstMainNav"},
+							 {href: "http://instructionaldesignbyjohn.com/secondaryPages/id.html#homeBrew", text: "Brewing Beer at Home", class:"liFirstMainNav"} ];
 
 const webMainNav = document.getElementById('webMainNav');
-const webMainNavBuilder = [ {href: "C://Users/keena/Desktop/newPortfolio/secondaryPages/web.html#myPortfolio", text: "Personal Portfolio", class: "liWebMainNav"},
-							{href: "C://Users/keena/Desktop/newPortfolio/secondaryPages/web.html", text: "Buck Bald Brewing", class: "liWebMainNav"} ];
+const webMainNavBuilder = [ {href: "http://instructionaldesignbyjohn.com/secondaryPages/web.html#myPortfolio", text: "Personal Portfolio", class: "liWebMainNav"},
+							{href: "http://instructionaldesignbyjohn.com/secondaryPages/web.html", text: "Buck Bald Brewing", class: "liWebMainNav"} ];
 
 const aboutMainNav = document.getElementById('aboutMainNav');
 const aboutMainNavBuilder = [ {href: "#", text: "About Me", class: "liAboutNav"}, 
-							{href: "#", text: "Download Resume", class: "liAboutNav"}];
+							{href: "C:/Users/keena/Desktop/newPortfolio/resume.docx", text: "Download Resume", class: "liAboutNav"}];
 
 const thanksMainNav = document.getElementById('thanksMainNav');
 
@@ -34,7 +34,7 @@ const liAboutNav = document.getElementsByClassName('liAboutNav');
 
 
 /// selects the id of the LI that we are targeting (through domSelector argument). Selects the last child of that LI (which is an empty UL that we will build on.)
-/// creates new li element off of the empty UL.  Li attributes include text, class, and href. Loops through object and repeats the process.
+/// creates new li element off of the empty UL.  Li attributes include text, class, and href. Loops through object (forEach) and repeats the process.
 function boxAppear (domSelector, objectSelector) {
 	objectSelector.forEach( (arg) => {
 		let lastChild = domSelector.lastElementChild;
