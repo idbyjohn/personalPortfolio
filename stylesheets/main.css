@@ -317,6 +317,12 @@ max-height: 60%;
 	font-size: 1.1em;
 }
 
+#aboutContent h1 {
+	font-family: 'EB Garamond', serif;
+	font-size: 1.6em;
+	text-align: center;
+}
+
 .modalLink {
 	text-align: center;
 	color: white;
@@ -340,6 +346,17 @@ max-height: 60%;
 .closeButton {
 	height: 100%;
 	width: 100%;
+}
+
+#closeContent {
+	margin-top: 20px;
+	color: white;
+	text-decoration: underline;
+}
+
+#closeContent {
+	cursor: pointer;
+	font-family: 'Forum', cursive;
 }
 
 								/*LAYOUT*/
@@ -371,6 +388,10 @@ max-height: 60%;
 	top: 4px;
 }
 
+#closeContent {
+	align-self: flex-end;
+}
+
 
 /*-----------------------------THANKS MODAL----------------------------------*/
 
@@ -386,6 +407,7 @@ max-height: 60%;
 	color: white;
 	font-family: 'Forum', cursive;
 	font-size: 1.1em;
+	text-align: center;
 }
 
 #closeButton {
@@ -401,6 +423,20 @@ max-height: 60%;
 	height: 100%;
 	width: 100%;
 }
+
+#closeContent {
+	margin-top: 20px;
+	color: white;
+}
+
+#closeContent {
+	cursor: pointer;
+	font-family: 'Forum', cursive;
+}
+
+
+
+
 
 								/*LAYOUT*/
 #modalBacksplash {
@@ -426,6 +462,8 @@ max-height: 60%;
 	right: 4px;
 	top: 4px;
 }
+
+
 /*==============================================================================================================================
 
                            								 FOOTER PHONE
@@ -707,6 +745,9 @@ footer p {
 	#aboutContent {
 	width: 50%;
 	}
+	#thanksContent {
+	width: 50%;
+	}
 }
 
 								/*LAYOUT*/
@@ -788,18 +829,7 @@ footer p {
 	}
 }
 
-/*-----------------------------ABOUT MODAL----------------------------------*/
 
-								/*STYLES*/
-
-
-/*About Modal */
-
-@media only screen and (min-width: 700px) {
-	#aboutContent {
-	width: 40%;
-	}
-}
 
 								/*LAYOUT*/
 
@@ -809,3 +839,18 @@ footer p {
 
 ===============================================================================================================================*/
 
+/*-----------------------------ABOUT MODAL----------------------------------*/
+
+								/*STYLES*/
+
+
+/*About Modal */
+
+@media only screen and (min-width: 900px) {
+	#aboutContent {
+	width: 40%;
+	}
+	#thanksContent {
+	width: 40%;
+	}
+}

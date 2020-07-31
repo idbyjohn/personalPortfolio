@@ -13,7 +13,25 @@
 	border: solid red 2px;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 /*======================================================================================================================
 
@@ -253,6 +271,167 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+/*-----------------------------ABOUT MODAL----------------------------------*/
+
+								/*STYLES*/
+
+/*Modal Backsplash*/
+#modalBacksplash {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(61, 66, 69, 0.7);
+	z-index: 4;
+}
+
+/*About Modal */
+
+.secondPic {
+max-height: 60%;
+}
+
+#aboutContent {
+	max-height: 80%;
+	overflow: auto;
+	width: 80%;
+	padding: 30px;
+	background-color: black;
+	border-radius: 5px;
+	color: white;
+	font-family: 'Forum', cursive;
+	font-size: 1.1em;
+	text-align: center;
+}
+
+#aboutContent p {
+	text-align: left;
+}
+
+.modalLink {
+	text-align: center;
+	color: white;
+	font-size: 1.3em;
+	font-family: 'EB Garamond', serif;
+}
+
+.modalLink:visited{
+	color: white;
+}
+
+#closeButton {
+	height: 32px;
+	width: 32px;
+}
+
+#closeButton:hover {
+	cursor: pointer;
+}
+
+.closeButton {
+	height: 100%;
+	width: 100%;
+}
+
+#closeContent {
+	margin-top: 20px;
+	color: white;
+	text-decoration: underline;
+}
+
+#closeContent {
+	cursor: pointer;
+	font-family: 'Forum', cursive;
+}
+
+								/*LAYOUT*/
+#modalBacksplash {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#aboutContent {
+	align-self: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.secondPic {
+	align-self: center;
+}
+
+#closeButton {
+	position: absolute;
+	right: 4px;
+	top: 4px;
+}
+
+#closeContent {
+	align-self: flex-end;
+}
+
+
+/*-----------------------------THANKS MODAL----------------------------------*/
+
+/*Thanks Modal */
+
+#thanksContent {
+	max-height: 80%;
+	overflow: auto;
+	width: 80%;
+	padding: 30px;
+	background-color: black;
+	border-radius: 5px;
+	color: white;
+	font-family: 'Forum', cursive;
+	font-size: 1.1em;
+	text-align: center;
+}
+
+#closeButton {
+	height: 32px;
+	width: 32px;
+}
+
+#closeButton:hover {
+	cursor: pointer;
+}
+
+.closeButton {
+	height: 100%;
+	width: 100%;
+}
+
+								/*LAYOUT*/
+#modalBacksplash {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#thanksContent {
+	align-self: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#closeButton {
+	position: absolute;
+	right: 4px;
+	top: 4px;
 }
 
 /*===========================================================================================================================
@@ -592,6 +771,24 @@ footer p {
 	}
 }
 
+/*-----------------------------ABOUT MODAL----------------------------------*/
+
+								/*STYLES*/
+
+
+/*About Modal */
+
+@media only screen and (min-width: 700px) {
+	#aboutContent {
+	width: 50%;
+	}
+	#thanksContent {
+	width: 40%;
+	}
+}
+
+
+
 
 /*==============================================================================================================================
 
@@ -667,5 +864,27 @@ footer p {
 	}
 	.homeBrew .smallCardContent .fileDownloads .fileDownloadsWrapper p {
 		padding-top: 12px;
+	}
+}
+
+/*==============================================================================================================================
+
+                           							 HEADER SCREENS 901 - 1200px
+
+===============================================================================================================================*/
+
+/*-----------------------------ABOUT MODAL----------------------------------*/
+
+								/*STYLES*/
+
+
+/*About Modal */
+
+@media only screen and (min-width: 900px) {
+	#aboutContent {
+	width: 40%;
+	}
+	#thanksContent {
+	width: 40%;
 	}
 }

@@ -18,7 +18,7 @@ const webMainNavBuilder = [ {href: "http://instructionaldesignbyjohn.com/seconda
 
 const aboutMainNav = document.getElementById('aboutMainNav');
 const aboutMainNavBuilder = [ {href: "#", text: "About Me", class: "liAboutNav"}, 
-							{href: "C:/Users/keena/Desktop/newPortfolio/resume.docx", text: "Download Resume", class: "liAboutNav"}];
+							{href: "http://instructionaldesignbyjohn.com/resume.docx", text: "Download Resume", class: "liAboutNav"}];
 
 const thanksMainNav = document.getElementById('thanksMainNav');
 
