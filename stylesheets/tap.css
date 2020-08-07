@@ -1,0 +1,914 @@
+
+/*====================================================================================================================
+
+                           								 UNIVERSAL STYLES
+
+======================================================================================================================*/
+
+* {
+	box-sizing: border-box;
+}
+
+.error {
+	border: solid red 2px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*======================================================================================================================
+
+                           								 HEADER PHONE
+
+========================================================================================================================*/
+
+/*-----------------------------GENERAL FORMATTING----------------------------------*/
+
+                               /*STYLE*/
+
+.spacer {
+	height: 46px;
+	background-color: black;
+}
+
+                         		/*LAYOUT*/
+
+/*-----------------------------SANDWICH ICON----------------------------------*/
+
+								/*STYLE*/
+#sandwichNav {
+	background-color: #7e7e7e;
+	height: 40px;
+	width: 40px;
+	border-radius: 5px;
+}
+
+#sandwichNav div {
+	margin: 0 auto;
+	height: 2px;
+	width: 50%;
+	background-color: white;
+}
+
+#sandwichNav div:first-child {
+	margin-top: 10px;
+}
+
+#sandwichNav div:last-child {
+	margin-bottom: 10px;
+}
+
+							     /*LAYOUT*/
+#sandwichNav {
+	position: fixed;
+	z-index: 2;
+	top: 12px;
+	right: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+/*-----------------------------SANDWICH MENU----------------------------------*/
+
+								   /*STYLE*/
+#expandedMenuBacker {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0);
+}
+
+#expandedMenu {
+	background: linear-gradient(rgba(126 ,126, 126, 0.8),rgba(126 ,126, 126, 0.8));
+	border-radius: 5px;
+	width: 100%;
+}
+
+#expandedMenu ul {
+	list-style-type: none;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0));
+	text-align: center;
+}
+
+#expandedMenu li {
+	padding: 16px;
+}
+
+#expandedMenu li:first-child {
+	margin-top: 46px;
+}
+
+#expandedMenu li:last-child {
+	margin-bottom: 46px;
+}
+
+#expandedMenu li a {
+	text-decoration: none;
+	color: white;
+	font-family: 'EB Garamond', serif;
+	font-size: 1.3em;
+}
+#menuItems {
+	padding: 0;
+}
+
+
+                                 /*LAYOUT*/
+
+#expandedMenu {
+	position: fixed;
+	top: 52px;
+	z-index: 2;
+}
+
+#expandedMenuBacker {
+	top: 0;
+	z-index: 1;
+	position: fixed;
+}
+
+#expandedMenu {
+	display: none;
+}
+
+#expandedMenuLander {
+	display: none;
+}
+
+
+
+
+
+
+/*-----------------------------MAIN NAVIGATION----------------------------------*/
+
+								/*STYLES*/
+
+								/*LAYOUT*/
+#mainNav {
+	display: none;
+}
+
+
+/*-----------------------------DOCUMENT BACKGROUND----------------------------------*/
+
+								/*STYLES*/
+#staticBackground {
+	background-size: cover;
+	background-position: center;
+	background-image: url('../img/mainBacker.jpg');
+	height: 100vh;
+	width: 100vw;
+}
+
+
+								/*LAYOUT*/
+
+#staticBackground {
+	z-index: -100;
+	position: fixed;
+}
+
+#documentWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+/*-----------------------------MAIN HEADER----------------------------------*/
+
+								/*STYLES*/
+
+/*Tagline Styles*/
+
+.tagLine {
+	background-color: black;
+	
+	width: 100%;
+	
+}
+
+.tagLine p {
+	color: white;
+	font-family: 'Forum', cursive;
+	font-size: 1.3em;
+	padding-left: 16px;
+	margin: 20px 0px;
+	max-width: 80%;
+}
+
+/*Main Header*/
+
+.secondaryHeader {
+	background-color: black;
+	transition: height, 0.5s;
+}
+
+.secondaryHeader p {
+	color: white;
+	font-family: 'Forum', cursive;
+	font-size: 1.4em;
+	padding-left: 16px;
+	max-width: 78%;
+	margin: 0;
+	padding: 20px;
+}
+
+.secondaryTitle {
+	border: black 1px solid;
+	background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9));
+	width: 100%;
+	margin: 0px auto;
+	box-shadow: 5px 10px 10px rgb(0, 0, 0);
+}
+
+.secondaryTitle h1 {
+	font-size: 2.5em;
+	color: white;
+	font-family: 'EB Garamond', serif;
+	font-weight: bolder;
+	text-align: center;
+	margin: 18px;
+}
+
+								/*LAYOUT*/
+/*Tagline Layout*/
+.tagLine {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+/*Main Header*/
+
+.secondaryTitle {
+	position: fixed;
+}
+
+
+
+/*===========================================================================================================================
+
+                            								MAIN PHONE
+
+=============================================================================================================================*/
+
+/*-----------------------------MAIN PHONE----------------------------------*/
+
+								/*STYLES*/
+/*Tab Navigation for Content Section*/
+.tabNav {
+	background-color: black;
+	width: 100%;
+}
+
+.tabNav div:hover {
+	cursor: pointer;
+	background-color: rgb(35,39,41)
+}
+
+.tabNav div a {
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Forum', cursive;
+	font-size: 1.3em;
+	height: 100%;
+	width: 100%;
+	padding: 15px;
+}
+
+
+/*Main Content Backsplash*/
+.secondaryMain {
+	border: black 1px solid;
+	background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9));
+	width: 95%;
+	margin: 200px auto 40px;
+	box-shadow: 5px 10px 10px rgb(0, 0, 0);
+}
+
+/*Main Content*/
+
+.mainContent {
+	width: 85%;
+}
+.tapLogo {
+	width: 40%;
+	margin-top: 30px;
+}
+.mainContent h2 {
+	text-align: center;
+	text-decoration: underline;
+	color: rgb(58, 119, 169);
+	font-size: 2.8em;
+	font-family: 'EB Garamond', serif;
+}
+
+.mainContent h3 {
+	text-decoration: underline;
+	color: #6D6D6D;
+	font-size: 2em;
+	font-family: 'Forum', cursive;
+}
+
+.mainContent p {
+	color: white;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	font-family: 'Forum', cursive;
+}
+
+.exampleCard {
+	border: solid white 2px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.blueTextTitle {
+	text-decoration: underline;
+}
+
+.blueText {
+	color: rgb(58, 119, 169);
+	font-size: 1.3em;
+}
+
+.grayText {
+	color: #6D6D6D;
+	font-size: 1.2em;
+}
+
+.whiteText {
+	color: white;
+}
+
+.tempChartLink {
+	color: white;
+	font-family: 'Forum', cursive;
+	font-size: 1.8em;
+	text-align: center;
+	border: 2px solid white;
+	text-decoration: none;
+}
+
+.tempChartLink:hover {
+	background-color: #6D6D6D;
+}
+								/*LAYOUT*/
+/*Tab Navigation for Content Section*/
+.tabNav {
+	position: sticky;
+	top: 160px;
+	display:flex;
+	flex-direction: column;
+}
+
+.tabNav div {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/*Main Content Backsplash*/
+.secondaryMain {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/*Main Content*/
+
+.mainContentWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tapLogo {
+	align-self: center;
+}
+
+
+
+
+
+/*-----------------------------ABOUT MODAL----------------------------------*/
+
+								/*STYLES*/
+
+/*Modal Backsplash*/
+#modalBacksplash {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(61, 66, 69, 0.7);
+	z-index: 4;
+}
+
+/*About Modal */
+
+.secondPic {
+max-height: 60%;
+}
+
+#aboutContent {
+	max-height: 80%;
+	overflow: auto;
+	width: 80%;
+	padding: 30px;
+	background-color: black;
+	border-radius: 5px;
+	color: white;
+	font-family: 'Forum', cursive;
+	font-size: 1.1em;
+	text-align: center;
+}
+
+#aboutContent p {
+	text-align: left;
+}
+
+.modalLink {
+	text-align: center;
+	color: white;
+	font-size: 1.3em;
+	font-family: 'EB Garamond', serif;
+}
+
+.modalLink:visited{
+	color: white;
+}
+
+#closeButton {
+	height: 32px;
+	width: 32px;
+}
+
+#closeButton:hover {
+	cursor: pointer;
+}
+
+.closeButton {
+	height: 100%;
+	width: 100%;
+}
+
+#closeContent {
+	margin-top: 20px;
+	color: white;
+	text-decoration: underline;
+}
+
+#closeContent {
+	cursor: pointer;
+	font-family: 'Forum', cursive;
+}
+
+
+								/*LAYOUT*/
+#modalBacksplash {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#aboutContent {
+	align-self: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+
+.secondPic {
+	align-self: center;
+}
+
+#closeButton {
+	position: absolute;
+	right: 4px;
+	top: 4px;
+}
+
+#closeContent {
+	align-self: flex-end;
+}
+
+/*-----------------------------THANKS MODAL----------------------------------*/
+
+/*Thanks Modal */
+
+#thanksContent {
+	max-height: 80%;
+	overflow: auto;
+	width: 80%;
+	padding: 30px;
+	background-color: black;
+	border-radius: 5px;
+	color: white;
+	font-family: 'Forum', cursive;
+	font-size: 1.1em;
+	text-align: center;
+}
+
+#closeButton {
+	height: 32px;
+	width: 32px;
+}
+
+#closeButton:hover {
+	cursor: pointer;
+}
+
+.closeButton {
+	height: 100%;
+	width: 100%;
+}
+
+								/*LAYOUT*/
+#modalBacksplash {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 4;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#thanksContent {
+	align-self: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#closeButton {
+	position: absolute;
+	right: 4px;
+	top: 4px;
+}
+
+/*==============================================================================================================================
+
+                           								 FOOTER PHONE
+
+================================================================================================================================*/
+
+/*-----------------------------FOOTER----------------------------------*/
+
+								/*STYLES*/
+/*footer*/
+footer {
+	/*margin: 0;*/
+	margin-top: auto;
+	width: 100%;
+	background-color: black;
+}
+
+footer p {
+	font-family: 'Forum', cursive;
+	color: white;
+	text-align: center;
+	margin: 0;
+}
+
+								/*LAYOUT*/
+
+
+
+/*=================================================================================================================================
+
+                           							 MAIN HEADER > 352PX
+
+==================================================================================================================================*/
+
+/*-----------------------------"MAIN HEADER"----------------------------------*/
+
+								/*STYLES*/
+/*Tagline*/
+
+@media (min-width: 352px) {
+	.tagLine p {
+		font-size: 1.4em;
+	}
+}
+
+@media (min-width: 352px) {
+	.secondaryMain {
+		margin-top: 150px;
+	}
+}
+								/*LAYOUT*/
+
+/*=================================================================================================================================
+
+                           							 MAIN HEADER > 352PX
+
+==================================================================================================================================*/
+
+/*-----------------------------"MAIN HEADER"----------------------------------*/
+
+								/*STYLES*/
+
+@media (min-width: 609px) {
+	.secondaryMain {
+		margin-top: 110px;
+	}
+}
+								/*LAYOUT*/
+
+
+/*=================================================================================================================================
+
+													HEADER SCREENS > 700PX
+
+===================================================================================================================================*/
+
+/*-----------------------------MAIN NAVIGATION----------------------------------*/
+
+								/*STYLES*/
+
+
+@media only screen and (min-width: 700px) {
+
+	/*These are styles for the main buttons at the top of the page */
+	#mainNav ul:first-child {
+		list-style-type: none;
+		background-color: black;
+		margin: 0;
+		padding: 0;
+		height: 65px;
+		width: 100%;
+	}
+
+	#homeMainNav, #firstMainNav, #webMainNav, #aboutMainNav, #thanksMainNav{
+		position: static;
+		padding: 10px;
+		text-align: center;
+		margin: 0px 20px;
+		/*background-color: orange;*/
+	}
+
+	#mainNav #webMainNav {
+		display: none;
+	}
+
+	#mainNav ul:first-child li:hover {
+		background-color: rgb(35, 39, 41);
+	}
+
+	#mainNav ul li:last-child {
+		margin-right: auto;
+	}
+
+	/*#mainNav ul:first-child li {
+		padding: 0 10px;
+	}*/
+
+	#mainNav ul:first-child li a {
+		height: 100%;
+		width: 100%;
+		padding-top: 12px;
+		text-decoration: none;
+		color: white;
+		font-family: 'Forum', cursive;
+		font-size: 1.2em;
+	}
+
+	/*Positions the empty UL absolute from the parent firstMainNav (static)*/
+	#mainNav .mainExpanderMenu ul:last-child {
+		position: absolute;
+		list-style-type: none;
+		padding-left: 0px;
+	}
+
+	#mainNav .mainExpanderMenu ul:last-child li:hover {
+		background-color: rgba(35, 39, 41);
+	}
+
+	#mainNav .mainExpanderMenu ul:last-child li {
+		background-color: rgb(0, 0, 0);
+		text-align: left;
+		border: 0.5px white solid;
+	}
+
+	#mainNav .mainExpanderMenu ul:last-child li a {
+		padding: 20px;
+		padding-top: 20px;
+		font-size: 1em;
+		font-family: 'Forum', cursive;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+	}
+
+	#homeMainNav ul:last-child{
+		bottom: 0px;
+		left: 18px;
+		height: 0px;
+		width: 206px;
+	}
+
+	#firstMainNav ul:last-child{
+		bottom: 0px;
+		left: 126px;
+		height: 0px;
+		width: 206px;
+	}
+
+	#webMainNav ul:last-child {
+		bottom: 0px;
+		left: 126px;
+		height: 0px;
+		width: 206px;
+	}
+
+	#aboutMainNav ul:last-child {
+		bottom: 0px;
+		left: 341px;
+		height: 0px;
+		width: 206px;
+	}
+
+}
+								/*LAYOUT*/
+
+
+@media only screen and (min-width: 700px) {
+	/*This removes the sandwich nav on screens larger than 700PX*/
+	#sandwichNavWrapper {
+		display: none;
+	}
+
+	#sandwichNav {
+		display: none;
+	}
+
+	#mainNav {
+		display: flex;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		width: 100%;
+		z-index: 1; 
+	}
+
+	#mainNav ul:first-child {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-around;
+	}
+
+	#mainNav ul li {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+/*-----------------------------ABOUT MODAL----------------------------------*/
+
+								/*STYLES*/
+
+
+/*About Modal */
+
+@media only screen and (min-width: 700px) {
+	#aboutContent {
+	width: 50%;
+	}
+	#thanksContent {
+	width: 50%;
+	}
+}
+
+/*==============================================================================================================================
+
+                           							 MAIN SCREENS > 545PX
+
+===============================================================================================================================*/
+
+/*-----------------------------SMALL CARD----------------------------------*/
+
+								/*STYLES*/
+
+
+
+							/*LAYOUT*/
+
+@media only screen and (min-width: 545px) {
+	.tabNav {
+		position: sticky;
+		top: 135px;
+	}
+}
+
+/*==============================================================================================================================
+
+                           							 MAIN SCREENS > 700PX
+
+===============================================================================================================================*/
+
+/*-----------------------------SMALL CARD----------------------------------*/
+
+								/*STYLES*/
+
+@media only screen and (min-width: 700px) {
+	.secondaryMain {
+		margin-top: 110px;
+	}
+}
+
+
+
+							/*LAYOUT*/
+
+@media only screen and (min-width: 700px) {
+	.tabNav {
+		position: sticky;
+		top: 135px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+}
+
+
+/*==============================================================================================================================
+
+                           							 HEADER SCREENS 901 - 1200px
+
+===============================================================================================================================*/
+
+/*-----------------------------ABOUT MODAL----------------------------------*/
+
+								/*STYLES*/
+
+
+/*About Modal */
+
+@media only screen and (min-width: 900px) {
+	#aboutContent {
+	width: 40%;
+	}
+	#thanksContent {
+	width: 40%;
+	}
+}
+
+/*==============================================================================================================================
+
+                           							 MAIN SCREENS > 900PX
+
+===============================================================================================================================*/
+
+/*-----------------------------SMALL CARD----------------------------------*/
+
+								/*STYLES*/
+
+@media only screen and (min-width: 900px) {
+	.mainContent {
+		width: 70%;
+	}
+	.tapLogo {
+		width: 35%;
+		margin-top: 30px;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.secondaryMain {
+		width: 65%;
+	}
+}
+
+
+							/*LAYOUT*/
