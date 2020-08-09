@@ -34,7 +34,6 @@
 }
 
 
-
 /*======================================================================================================================
 
                            								 HEADER PHONE
@@ -214,7 +213,7 @@ html {
 	border: 2px solid #7e7e7e;
 	border-radius: 50%;
 	border-color: rgb(159, 162, 165);
-	background-image: url('../img/profilePic4.jpg');
+	background-image: url('../img/profilePic5.jpg');
 	background-size: cover;
 	margin: 0;
 }
@@ -532,7 +531,7 @@ footer p {
 		position: static;
 		padding: 10px;
 		text-align: center;
-		margin: 0px 20px;
+		margin: 0px 30px;
 		/*background-color: orange;*/
 	}
 
@@ -598,21 +597,21 @@ footer p {
 
 	#firstMainNav ul:last-child{
 		bottom: 0px;
-		left: 18px;
+		left: 30px;
 		height: 0px;
 		width: 206px;
 	}
 
 	#webMainNav ul:last-child {
 		bottom: 0px;
-		left: 235px;
+		left: 264px;
 		height: 0px;
 		width: 206px;
 	}
 
 	#aboutMainNav ul:last-child {
 		bottom: 0px;
-		left: 385px;
+		left: 438px;
 		height: 0px;
 		width: 206px;
 	}

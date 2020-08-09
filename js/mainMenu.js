@@ -9,7 +9,7 @@ const mainExpanderMenu = document.getElementsByClassName('mainExpanderMenu');
 const homeMainNav = document.getElementById('homeMainNav');
 
 const firstMainNav = document.getElementById('firstMainNav');
-const firstMainNavBuilder = [ {href: "http://instructionaldesignbyjohn.com/secondaryPages/id.html", text: "TAP Basic Setup", class:"liFirstMainNav"},
+const firstMainNavBuilder = [ {href: "http://instructionaldesignbyjohn.com/secondaryPages/id.html", text: "Educ 766", class:"liFirstMainNav"},
 							 {href: "http://instructionaldesignbyjohn.com/secondaryPages/id.html#homeBrew", text: "Brewing Beer at Home", class:"liFirstMainNav"} ];
 
 const webMainNav = document.getElementById('webMainNav');
