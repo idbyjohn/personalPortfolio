@@ -928,3 +928,75 @@ footer p {
 	    text-align: center;
 	}
 }
+
+/*==============================================================================================================================
+
+                           							 HEADER PORTRAIT SCREENS > 1200PX
+
+===============================================================================================================================*/
+
+/*-----------------------------HERO BANNER----------------------------------*/
+
+								/*STYLES*/
+/*.profile pic and children styles (makes the picture and it's children larger).*/
+@media only screen and (min-width: 1200px) {
+
+	.mainLogo {
+    	height: 55vh;
+    	width: 55vh;
+	}
+	.specialTagLine {
+		font-size: 8vh;
+	}
+
+	.specialSocialNav a img {
+	    height: 10vh;
+	    width: 10vh;
+	}
+	.specialGreetingSpan1 {
+    	font-size: 8vh;
+	}
+
+	.specialGreetingSpan2 {
+	    font-size: 5vh;
+	}
+}
+								/*LAYOUT*/
+
+/*Profile pic and children layout for larger picture*/
+@media only screen and (min-width: 1200px) {
+	.logoSpan1 {
+	    top: -2vh;
+	    left: -14vh;
+	}
+
+	.logoSpan2 {
+	    top: 6vh;
+	    left: -25vh;
+	}
+
+	.logoSpan3 {
+	    top: 15vh;
+	    left: -24vh;
+	}
+
+	.socialSpan1 {
+	    bottom: 15vh;
+	    right: 59vh;
+	}
+
+	.socialSpan2 {
+	    bottom: 1vh;
+	    right: 51vh;
+	}
+
+	.specialGreetingSpan1 {
+	    top: -1vh;
+	    right: -35vh;
+	}
+
+	.specialGreetingSpan2 {
+	    top: 10vh;
+	    left: 57vh;
+	}
+}
