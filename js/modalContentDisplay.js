@@ -7,6 +7,7 @@ const linkItem = document.getElementsByClassName('linkItem');
 const aboutContent = document.getElementById('aboutContent');
 const thanksContent = document.getElementById('thanksContent');
 const closeButton = document.getElementById('closeButton');
+const formOpen = document.getElementsByClassName('formOpen');
 
 //Adds div with all HTML needed to build the aboutContent Div and all its children.
 function addRemoveAboutDiv () {
@@ -47,12 +48,6 @@ function addRemoveAboutDiv () {
 			modalBacksplash.removeChild(aboutContent);
 		});
 	}
-	// const closeButton = document.getElementById('closeButton');
-	// closeButton.addEventListener('click', ()=>{
-	// 	const aboutContent = document.getElementById('aboutContent');
-	// 	modalBacksplash.style.display = "";
-	// 	modalBacksplash.removeChild(aboutContent);
-	// });
 }
 
 function addRemoveThanksDiv() {
@@ -89,16 +84,44 @@ function addRemoveThanksDiv() {
 		});
 }
 
+function addRemoveContactDiv () {
+	modalBacksplash.style.display="flex";
+	let newContactDiv = document.createElement('DIV');
+	newContactDiv.innerHTML = `
+							<h1>Contact Me!</h1>
+							<form>
+								<label for="name">Your Name:</label><br>
+								<input id="nameInput" type="text" name="name" placeholder="Your Name"><br><br>
+								<label for="email">Your Email:</label><br>
+								<input id="emailInput" type="email" name="email" placeholder="Your Email"><br><br>
+								<label for="userText">Your Message:</label><br>
+								<textarea id="textAreaInput" name="userText" placeholder="Write me a note!">
+								</textarea><br><br>
+								<input type="submit">
+							</form>
+							<div id="closeButton"><img class= "closeButton" src="http://instructionaldesignbyjohn.com/img/circleXIcon.png" alt="close icon"></div>
+							`	
+	newContactDiv.setAttribute('id', 'contactContent');
+	modalBacksplash.appendChild(newContactDiv);
+
+	const closeButton = document.getElementById('closeButton');
+	closeButton.addEventListener('click', ()=>{
+		const contactContent = document.getElementById('contactContent');
+		modalBacksplash.style.display = "none";
+		modalBacksplash.removeChild(contactContent);
+	});
+}
+
 
 
 //listens for clicks on the the main nav button and its first child in large screens.  Displays modalBacksplash and inserts the div.
-//listens for clicks on the closeButton div and closes the modalBacksplash and all its children when clicked.  
-aboutMainNav.addEventListener('click', (event) => {
+//listens for clicks on the closeButton div and closes the modalBacksplash and all its children when clicked.  Rungs addRemoveAboutDiv function
+aboutMainNav.addEventListener('click', () => {
 	addRemoveAboutDiv();
 });
 
 //selects the third item in the sandwich menu and adds event listener.  "Closes" the expanded menu and generates the modalBacksplash
-//all it's children
+//all it's children. Tuns addRemoveAboutDiv function
 linkItem[2].addEventListener('click', ()=>{
 	expandedMenu.style.display = 'none';
 	expandedMenuLander.style.display = 'none';
@@ -107,16 +130,25 @@ linkItem[2].addEventListener('click', ()=>{
 
 
 //listen for clicks on the main nav button and its second child in large screens. Displays modalBacksplash and inserts the div.
-//listens for clidks on the closeButton div and closes the modalBacksplash and all its children.
+//listens for clidks on the closeButton div and closes the modalBacksplash and all its children. Runs addRemoveThanksDiv function.
 thanksMainNav.addEventListener('click', () => {
 	addRemoveThanksDiv();
 });
 
 //selects the third item in the sandwich menu and adds event listener.  "Closes" the expanded menu and generates the modalBacksplash
-//all it's children
+//all it's children and runs the addRemoveThanksDiv function
 linkItem[3].addEventListener('click', () => {
 	expandedMenu.style.display = 'none';
 	expandedMenuLander.style.display = 'none';
 	addRemoveThanksDiv();
 });
 
+//selects the formOpen class on index.html (these are the email social navigation [for both socialNav and socialSpan3]).
+
+// formOpen[0].addEventListener('click', ()=>{
+// 	addRemoveContactDiv();
+// });
+
+// formOpen[1].addEventListener('click', ()=>{
+// 	addRemoveContactDiv();
+// });

@@ -462,6 +462,51 @@ max-height: 60%;
 	top: 4px;
 }
 
+/*-----------------------------CONTACT MODAL----------------------------------*/
+
+								/*STYLES*/
+#contactContent {
+	max-height: 80%;
+	overflow: auto;
+	width: 80%;
+	padding: 30px;
+	background-color: black;
+	border-radius: 5px;
+	color: white;
+	font-family: 'Forum', cursive;
+	font-size: 1.1em;
+	text-align: center;
+}
+
+#closeButton {
+	height: 32px;
+	width: 32px;
+}
+
+#closeButton:hover {
+	cursor: pointer;
+}
+
+.closeButton {
+	height: 100%;
+	width: 100%;
+}
+
+
+								/*LAYOUT*/
+
+#contactContent {
+	align-self: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#closeButton {
+	position: absolute;
+	right: 4px;
+	top: 4px;
+}
 
 /*==============================================================================================================================
 
@@ -669,12 +714,7 @@ footer p {
 }
 
 /*Special Social Navigation*/
-@media only screen and (min-width: 700px) {
-	.specialSocialNav a img {
-		height: 6vh;
-		width: 6vh;
-	}
-}
+
 
 								/*LAYOUT*/
 
@@ -716,20 +756,6 @@ footer p {
 		position: absolute;
 		top: 14vh;
 		left: -18vh;
-	}
-}
-
-/*Special Social Span*/
-@media only screen and (min-width: 700px) {
-	.socialSpan1 {
-		position: absolute;
-		bottom: -3vh;
-		right: -4vh;
-	}
-	.socialSpan2 {
-		position: absolute;
-		bottom: 6vh;
-		right: -10vh;
 	}
 }
 
@@ -813,18 +839,30 @@ footer p {
 }
 
 /*Special Social Nav*/
-
+@media only screen and (min-width: 900px) {
+	.specialSocialNav a img {
+		height: 6vh;
+		width: 6vh;
+	}
+}
 @media only screen and (min-width: 900px) {
 	.specialSocialNav {
 		display: inline-block;
 	}
 	.socialSpan1 {
-		bottom: 5vh;
-		right: 39vh;
+		position: absolute;
+		bottom: 7vh;
+		right: 38vh;
 	}
 	.socialSpan2 {
-		bottom: -3vh;
+		position: absolute;
+		bottom: -2vh;
 		right: 32vh;
+	}
+	.socialSpan3 {
+		position: absolute;
+		bottom: -8vh;
+		right: 22vh;
 	}
 }
 
@@ -847,9 +885,12 @@ footer p {
 
 @media only screen and (min-width: 900px) {
 	#aboutContent {
-	width: 40%;
+		width: 40%;
 	}
 	#thanksContent {
-	width: 40%;
+		width: 40%;
+	}
+	#contactContent {
+		width: 40%;
 	}
 }
