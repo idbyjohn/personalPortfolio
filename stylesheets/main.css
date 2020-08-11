@@ -894,3 +894,37 @@ footer p {
 		width: 40%;
 	}
 }
+
+/*==============================================================================================================================
+
+                           							 HEADER PORTRAIT SCREENS > 1000PX
+
+===============================================================================================================================*/
+
+/*-----------------------------HERO BANNER----------------------------------*/
+
+								/*STYLES*/
+
+								/*LAYOUT*/
+
+/*.profile pic and children*/
+@media only screen and (orientation:portrait) and (min-width: 1000px) {
+	.profilePic {
+	    top: -8vh;
+	    left: 5vw;
+	}
+
+	.specialGreetingSpan1 {
+	    position: absolute;
+	    top: 43vh;
+	    right: 8vw;
+	}
+
+	.specialGreetingSpan2 {
+	    position: absolute;
+	    top: 51vh;
+	    left: -31vw;
+	    min-width: 100vw;
+	    text-align: center;
+	}
+}
