@@ -391,17 +391,24 @@
 	word-wrap: break-word;
 }
 
-.tempChartLink {
+.downloadDiv {
+	background-color: rgb(58, 119, 169);
 	color: white;
 	font-family: 'Forum', cursive;
-	font-size: 1.8em;
+	font-size: 1.2em;
+	border-radius: 10px;
+	border: solid 2px white;
+	margin: 0 auto;
 	text-align: center;
-	border: 2px solid white;
-	text-decoration: none;
 }
 
-.tempChartLink:hover {
-	background-color: #6D6D6D;
+.downloadDiv a {
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
 }
 								/*LAYOUT*/
 
